@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .freecard {
+    position: absolute; top: 470px; left: 76px; right: 76px;
+    background: var(--ink); border-radius: 24px;
+    padding: 60px 56px;
+    box-shadow: 0 30px 70px rgba(17,17,17,0.30);
+  }
+  .freecard .price {
+    font-family: 'Archivo Black'; font-size: 150px; color: var(--terra);
+    letter-spacing: -0.04em; line-height: 0.9;
+  }
+  .freecard .strike {
+    font-family: 'Archivo Black'; font-size: 54px; color: rgba(255,255,255,0.35);
+    text-decoration: line-through; text-decoration-thickness: 6px;
+    margin-bottom: 6px;
+  }
+  .freecard p { color: #ccc; font-size: 27px; line-height: 1.45; font-weight: 500; margin-top: 28px; }
+  .freecard p b { color: #fff; font-weight: 800; }
+
+  .cta {
+    position: absolute; top: 1000px; left: 76px; right: 76px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .follow {
+    font-size: 33px; font-weight: 600; color: #333; line-height: 1.35;
+  }
+  .follow b { font-weight: 800; }
+  .save {
+    background: var(--ink); color: #fff; border-radius: 14px;
+    padding: 24px 34px 24px 30px;
+    display: flex; align-items: center; gap: 18px;
+    box-shadow: 0 18px 40px rgba(17,17,17,0.35);
+  }
+  .save .txt { font-family: 'Archivo Black'; font-size: 34px; line-height: 0.95; }
+  .save svg { width: 38px; height: 38px; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">5/5</div></div>
+
+  <div class="kicker terra">THE BEST PART</div>
+  <div class="headline" style="font-size:110px;">Free. <span class="accent">For now.</span></div>
+
+  <div class="freecard">
+    <div class="strike">Frontier-tier pricing</div>
+    <div class="price">$0</div>
+    <p>Fable 5 is <b>free to use right now</b> — but windows like this never stay open. Go run your hardest task on it <b>today</b> and see the difference yourself.</p>
+  </div>
+
+  <div class="cta">
+    <div class="follow">Follow <b>@ollierdz</b> for more<br>AI drops like this 🔔</div>
+    <div class="save">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></svg>
+      <div class="txt">SAVE<br>POST!</div>
+    </div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

@@ -1,0 +1,77 @@
+@font-face { font-family: 'Archivo Black'; src: url('fonts/ArchivoBlack.ttf'); }
+@font-face { font-family: 'Archivo'; src: url('fonts/ArchivoVar.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'Inter'; src: url('fonts/InterVar.ttf'); font-weight: 100 900; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #111111;
+  --terra: #DE8B66;
+  --paper: #F5F3EF;
+}
+
+body {
+  width: 1080px;
+  height: 1350px;
+  background:
+    radial-gradient(ellipse 900px 600px at 75% 42%, #ffffff 0%, rgba(255,255,255,0) 60%),
+    var(--paper);
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.topbar {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 64px;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+  z-index: 10;
+}
+.handle { color: #fff; font-weight: 600; font-size: 26px; letter-spacing: 0.01em; }
+.counter {
+  background: var(--terra); color: #fff;
+  font-weight: 700; font-size: 24px;
+  padding: 6px 22px; border-radius: 999px;
+}
+
+.wm {
+  position: absolute; bottom: 52px; left: 48px; z-index: 9;
+  font-weight: 700; font-size: 22px; color: rgba(17,17,17,0.55);
+  letter-spacing: 0.02em;
+}
+
+.kicker {
+  display: inline-block; background: var(--ink); color: #fff;
+  font-weight: 800; font-size: 24px; letter-spacing: 0.10em;
+  padding: 10px 24px; border-radius: 8px;
+  position: absolute; top: 140px; left: 76px;
+}
+.kicker.terra { background: var(--terra); }
+
+.headline {
+  position: absolute; top: 224px; left: 72px; right: 60px;
+  font-family: 'Archivo Black';
+  font-size: 104px;
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+}
+.headline .accent { color: var(--terra); }
+
+.body-copy {
+  position: absolute; left: 76px; right: 90px;
+  font-size: 34px; font-weight: 550; color: #333; line-height: 1.4;
+}
+.body-copy b { font-weight: 800; color: var(--ink); }
+
+.card {
+  background: #fff; border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(17,17,17,0.18), 0 6px 16px rgba(17,17,17,0.08);
+}
+.card.dark { background: var(--ink); color: #fff; }
+
+.mono {
+  font-family: 'DejaVu Sans Mono', monospace;
+}

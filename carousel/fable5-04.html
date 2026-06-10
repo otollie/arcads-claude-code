@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .rows { position: absolute; top: 500px; left: 76px; right: 76px; }
+  .row {
+    display: flex; align-items: flex-start; gap: 30px;
+    background: #fff; border-radius: 18px;
+    padding: 34px 36px; margin-bottom: 26px;
+    box-shadow: 0 14px 32px rgba(17,17,17,0.10);
+  }
+  .row .emoji { font-size: 56px; line-height: 1; }
+  .row h3 { font-family: 'Archivo Black'; font-size: 33px; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .row p { font-size: 23px; line-height: 1.45; color: #555; font-weight: 500; }
+  .row.hero { background: var(--ink); }
+  .row.hero h3 { color: var(--terra); }
+  .row.hero p { color: #ccc; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">4/5</div></div>
+
+  <div class="kicker terra">WHY IT MATTERS</div>
+  <div class="headline" style="font-size:92px;">It works while <span class="accent">you sleep.</span></div>
+
+  <div class="body-copy" style="top:452px;">
+    This isn't just a smarter chatbot — it's built to <b>finish jobs</b>, not answer questions.
+  </div>
+
+  <div class="rows" style="top:560px;">
+    <div class="row hero">
+      <div class="emoji">🌙</div>
+      <div>
+        <h3>Overnight runs that actually finish</h3>
+        <p>Hand it a full project brief and it executes for hours — no babysitting, no corrections.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="emoji">✍️</div>
+      <div>
+        <h3>Writing that doesn't sound like AI</h3>
+        <p>Clearer, warmer, less hedged — testers say it approaches expert-level prose.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="emoji">🐛</div>
+      <div>
+        <h3>Finds the bug — first try</h3>
+        <p>One-shot fixes where older models needed rounds. It even catches flaky tests.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>
