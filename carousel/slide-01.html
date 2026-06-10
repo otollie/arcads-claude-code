@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'Archivo Black';
+    src: url('fonts/ArchivoBlack.ttf');
+  }
+  @font-face {
+    font-family: 'Archivo';
+    src: url('fonts/ArchivoVar.ttf');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/InterVar.ttf');
+    font-weight: 100 900;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #111111;
+    --terra: #DE8B66;
+    --paper: #F5F3EF;
+  }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background:
+      radial-gradient(ellipse 900px 600px at 75% 42%, #ffffff 0%, rgba(255,255,255,0) 60%),
+      var(--paper);
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ── top bar ── */
+  .topbar {
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 64px;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+  }
+  .handle {
+    color: #fff; font-weight: 600; font-size: 26px; letter-spacing: 0.01em;
+  }
+  .counter {
+    background: #DE8B66; color: #fff;
+    font-weight: 700; font-size: 24px;
+    padding: 6px 22px; border-radius: 999px;
+  }
+
+  /* ── headline ── */
+  .headline {
+    position: absolute; top: 140px; left: 72px; right: 60px;
+    font-family: 'Archivo Black';
+    font-size: 118px;
+    line-height: 0.99;
+    letter-spacing: -0.035em;
+  }
+  .headline .accent { color: var(--terra); }
+
+  .sub {
+    position: absolute; top: 660px; left: 76px;
+    font-size: 35px; font-weight: 550; color: #333;
+    max-width: 560px; line-height: 1.3;
+  }
+  .sub b { font-weight: 800; color: var(--ink); }
+
+  /* ── big arrow ── */
+  .arrow {
+    position: absolute; top: 700px; right: 96px;
+    width: 230px; height: 230px;
+  }
+
+  /* ── fanned cards ── */
+  .deck {
+    position: absolute; bottom: -40px; left: -60px; right: -60px;
+    height: 460px;
+  }
+  .card {
+    position: absolute; bottom: 60px;
+    width: 300px; height: 380px;
+    background: #fff; border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(17,17,17,0.22), 0 6px 16px rgba(17,17,17,0.10);
+    padding: 30px 26px;
+    overflow: hidden;
+  }
+  .card .num {
+    position: absolute; bottom: 18px; right: 22px;
+    font-family: 'Archivo Black'; font-size: 64px; color: rgba(17,17,17,0.09);
+  }
+  .card h3 {
+    font-family: 'Archivo Black'; font-size: 27px; letter-spacing: -0.02em;
+    margin-bottom: 14px; line-height: 1.05;
+  }
+  .card p { font-size: 17.5px; line-height: 1.45; color: #555; font-weight: 500;}
+  .card .tag {
+    display: inline-block; background: var(--terra); color: #fff;
+    font-weight: 800; font-size: 14px; letter-spacing: 0.06em;
+    padding: 4px 12px; border-radius: 6px; margin-bottom: 16px;
+  }
+  .c1 { left: 70px;  transform: rotate(-7deg);  bottom: 36px; z-index: 1; }
+  .c2 { left: 390px; transform: rotate(-1.5deg); bottom: 64px; z-index: 2; }
+  .c3 { left: 710px; transform: rotate(5deg);   bottom: 30px; z-index: 3; }
+
+  /* dark hero card variant */
+  .c2 { background: var(--ink); }
+  .c2 h3 { color: #fff; }
+  .c2 p  { color: #bbb; }
+  .c2 .num { color: rgba(255,255,255,0.12); }
+
+  /* ── save post ── */
+  .save {
+    position: absolute; bottom: 44px; right: 44px; z-index: 9;
+    background: var(--ink); color: #fff;
+    border-radius: 14px;
+    padding: 20px 30px 20px 26px;
+    display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 18px 40px rgba(17,17,17,0.35);
+  }
+  .save .txt { font-family: 'Archivo Black'; font-size: 30px; line-height: 0.95; letter-spacing: -0.01em;}
+  .save svg { width: 34px; height: 34px; }
+
+  /* ── watermark ── */
+  .wm {
+    position: absolute; bottom: 52px; left: 48px; z-index: 9;
+    font-weight: 700; font-size: 22px; color: rgba(17,17,17,0.55);
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="handle">@ollierdz</div>
+    <div class="counter">1/10</div>
+  </div>
+
+  <div class="headline">
+    Everything new in <span class="accent">Claude Fable&nbsp;5</span> you need to know:
+  </div>
+
+  <div class="sub">
+    The <b>biggest Claude release yet</b> — a brand-new tier above Opus. Here's what actually changed&nbsp;👇
+  </div>
+
+  <svg class="arrow" viewBox="0 0 100 100">
+    <path d="M14 22 C 30 60, 48 72, 74 74 L 66 58 L 88 76 L 62 86 L 70 77
+             C 44 75, 26 60, 12 24 Z" fill="#111"/>
+  </svg>
+
+  <div class="deck">
+    <div class="card c1">
+      <div class="tag">NEW TIER</div>
+      <h3>Above Opus.</h3>
+      <p>Fable 5 is Anthropic's most powerful, most intelligent model — a whole new tier at the top of the lineup.</p>
+      <div class="num">#1</div>
+    </div>
+    <div class="card c2">
+      <div class="tag">CONTEXT</div>
+      <h3>1M tokens in. 128K out.</h3>
+      <p>Feed it entire codebases and long docs — and get massive outputs back in one shot.</p>
+      <div class="num">#2</div>
+    </div>
+    <div class="card c3">
+      <div class="tag">CONTROL</div>
+      <h3>Effort, not temperature.</h3>
+      <p>Sampling knobs are gone. You steer with prompting and an effort dial from low to max.</p>
+      <div class="num">#3</div>
+    </div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+
+  <div class="save">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></svg>
+    <div class="txt">SAVE<br>POST!</div>
+  </div>
+
+</body>
+</html>
