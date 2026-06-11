@@ -5,43 +5,43 @@
 
   /* dark anchor behind subject so the jacket grounds into the design */
   .anchor {
-    position: absolute; bottom: 0; right: 0;
+    position: absolute; bottom: 0; left: 0;
     width: 760px; height: 740px;
-    background: radial-gradient(ellipse 70% 70% at 70% 95%, rgba(17,17,17,0.40) 0%, rgba(17,17,17,0.0) 62%);
+    background: radial-gradient(ellipse 70% 70% at 30% 95%, rgba(17,17,17,0.40) 0%, rgba(17,17,17,0.0) 62%);
     z-index: 1;
   }
 
   .me {
-    position: absolute; bottom: 0; right: -36px;
+    position: absolute; bottom: 0; left: -36px;
     width: 650px; z-index: 2;
-    filter: drop-shadow(-14px 6px 26px rgba(17,17,17,0.30));
-    /* feather the very bottom edge so he rises out of the frame cleanly */
+    transform: scaleX(-1); /* face into the design */
+    filter: drop-shadow(14px 6px 26px rgba(17,17,17,0.30));
     -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
             mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
   }
 
-  .kicker { top: 128px; }
+  .kicker { top: 128px; left: 76px; }
   .headline {
-    position: absolute; top: 206px; left: 72px; width: 600px;
+    position: absolute; top: 206px; left: 72px; right: 64px;
     font-family: 'Archivo Black'; font-size: 86px; line-height: 0.99; letter-spacing: -0.035em;
     z-index: 3;
   }
   .headline .accent { color: var(--terra); }
 
   .sub {
-    position: absolute; top: 560px; left: 76px; width: 430px; z-index: 3;
+    position: absolute; top: 600px; right: 70px; width: 430px; z-index: 3;
     font-size: 33px; font-weight: 550; color: #333; line-height: 1.32;
   }
   .sub b { font-weight: 800; color: var(--ink); }
 
   .swipe {
-    position: absolute; top: 770px; left: 80px; z-index: 3;
+    position: absolute; top: 850px; right: 200px; z-index: 3;
     display: flex; align-items: center; gap: 14px;
     font-family: 'Archivo Black'; font-size: 30px; color: var(--ink); letter-spacing: -0.01em;
   }
   .swipe svg { width: 58px; height: 34px; }
 
-  .wm { z-index: 5; color: rgba(17,17,17,0.45); }
+  .wm { left: auto; right: 48px; z-index: 5; color: rgba(17,17,17,0.45); }
 </style></head>
 <body>
   <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">1/7</div></div>
