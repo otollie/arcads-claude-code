@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .recap { position: absolute; top: 470px; left: 76px; right: 76px; }
+  .step {
+    display: flex; align-items: center; gap: 26px;
+    background: #fff; border-radius: 14px;
+    padding: 24px 32px; margin-bottom: 20px;
+    box-shadow: 0 12px 26px rgba(17,17,17,0.10);
+  }
+  .step .n {
+    flex: 0 0 52px; width: 52px; height: 52px; border-radius: 50%;
+    background: var(--ink); color: #fff; font-family: 'Archivo Black'; font-size: 26px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step .mono { font-family: 'DejaVu Sans Mono', monospace; font-size: 26px; font-weight: 700; color: var(--ink); }
+  .step .mono .h { color: var(--terra); }
+
+  .cta {
+    position: absolute; bottom: 130px; left: 76px; right: 76px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .follow { font-size: 32px; font-weight: 600; color: #333; line-height: 1.35; }
+  .follow b { font-weight: 800; }
+  .save {
+    background: var(--ink); color: #fff; border-radius: 14px;
+    padding: 22px 32px 22px 28px; display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 18px 40px rgba(17,17,17,0.35);
+  }
+  .save .txt { font-family: 'Archivo Black'; font-size: 32px; line-height: 0.95; }
+  .save svg { width: 36px; height: 36px; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">6/6</div></div>
+
+  <div class="kicker terra">THE WHOLE THING</div>
+  <div class="headline" style="font-size:88px;">3 lines. <span class="accent">You're in.</span></div>
+
+  <div class="recap">
+    <div class="step"><div class="n">1</div><div class="mono"><span class="h">$</span> npm install -g&nbsp;@anthropic-ai/claude-code</div></div>
+    <div class="step"><div class="n">2</div><div class="mono"><span class="h">$</span> claude</div></div>
+    <div class="step"><div class="n">3</div><div class="mono"><span class="h">&gt;</span> ask it anything</div></div>
+  </div>
+
+  <div class="cta">
+    <div class="follow">Save this for setup day.<br>Follow <b>@ollierdz</b> for more 🔔</div>
+    <div class="save">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></svg>
+      <div class="txt">SAVE<br>POST!</div>
+    </div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>
