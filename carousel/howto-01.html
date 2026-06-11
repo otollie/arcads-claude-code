@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
 <style>
-  .headline { top: 156px; font-size: 100px; }
+  body { overflow: hidden; }
+
+  /* dark anchor behind subject so the jacket grounds into the design */
+  .anchor {
+    position: absolute; bottom: 0; right: 0;
+    width: 760px; height: 740px;
+    background: radial-gradient(ellipse 70% 70% at 70% 95%, rgba(17,17,17,0.40) 0%, rgba(17,17,17,0.0) 62%);
+    z-index: 1;
+  }
+
+  .me {
+    position: absolute; bottom: 0; right: -36px;
+    width: 650px; z-index: 2;
+    filter: drop-shadow(-14px 6px 26px rgba(17,17,17,0.30));
+    /* feather the very bottom edge so he rises out of the frame cleanly */
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
+  }
+
+  .kicker { top: 128px; }
+  .headline {
+    position: absolute; top: 206px; left: 72px; width: 600px;
+    font-family: 'Archivo Black'; font-size: 86px; line-height: 0.99; letter-spacing: -0.035em;
+    z-index: 3;
+  }
+  .headline .accent { color: var(--terra); }
+
   .sub {
-    position: absolute; top: 612px; left: 76px;
-    font-size: 35px; font-weight: 550; color: #333;
-    max-width: 580px; line-height: 1.3;
+    position: absolute; top: 560px; left: 76px; width: 430px; z-index: 3;
+    font-size: 33px; font-weight: 550; color: #333; line-height: 1.32;
   }
   .sub b { font-weight: 800; color: var(--ink); }
 
-  /* terminal window */
-  .term {
-    position: absolute; bottom: 70px; left: 70px; right: 70px;
-    background: #1b1b1d; border-radius: 18px;
-    box-shadow: 0 30px 70px rgba(17,17,17,0.30);
-    overflow: hidden;
+  .swipe {
+    position: absolute; top: 770px; left: 80px; z-index: 3;
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'Archivo Black'; font-size: 30px; color: var(--ink); letter-spacing: -0.01em;
   }
-  .term .bar {
-    height: 52px; background: #2b2b2e; display: flex; align-items: center; padding: 0 22px; gap: 11px;
-  }
-  .dot { width: 15px; height: 15px; border-radius: 50%; }
-  .r { background: #ff5f57; } .y { background: #febc2e; } .g { background: #28c840; }
-  .term .title { color: #888; font-size: 20px; margin-left: 18px; font-weight: 600;}
-  .term .body { padding: 30px 34px 38px; font-family: 'DejaVu Sans Mono', monospace; font-size: 27px; line-height: 1.7; }
-  .term .body .prompt { color: var(--terra); }
-  .term .body .cmd { color: #f2f2f2; }
-  .term .body .out { color: #7fd17f; }
-  .term .body .dim { color: #777; }
+  .swipe svg { width: 58px; height: 34px; }
 
-  .save {
-    position: absolute; bottom: 44px; right: 44px; z-index: 9;
-    background: var(--terra); color: #fff; border-radius: 14px;
-    padding: 20px 30px 20px 26px;
-    display: flex; align-items: center; gap: 16px;
-    box-shadow: 0 18px 40px rgba(222,139,102,0.45);
-  }
-  .save .txt { font-family: 'Archivo Black'; font-size: 30px; line-height: 0.95; }
-  .save svg { width: 34px; height: 34px; }
+  .wm { z-index: 5; color: rgba(17,17,17,0.45); }
 </style></head>
 <body>
-  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">1/6</div></div>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">1/7</div></div>
+
+  <div class="anchor"></div>
+  <img class="me" src="brand/ollierdz-cutout.png" alt="">
 
   <div class="kicker terra">TUTORIAL</div>
-  <div class="headline" style="top:222px; font-size:96px;">Install <span class="accent">Claude Code</span> in 5 minutes.</div>
+  <div class="headline">Install <span class="accent">Claude&nbsp;Code</span> in 5 minutes.</div>
 
   <div class="sub">
-    The AI agent that <b>writes, fixes & ships code</b> from your terminal. Here's the exact setup&nbsp;👇
+    The AI agent that <b>writes, fixes &amp; ships code</b> — right from your terminal.
   </div>
 
-  <div class="term">
-    <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="title">— claude code —</span></div>
-    <div class="body">
-      <div><span class="prompt">$</span> <span class="cmd">npm install -g @anthropic-ai/claude-code</span></div>
-      <div><span class="prompt">$</span> <span class="cmd">claude</span></div>
-      <div><span class="out">✔ Welcome to Claude Code</span> <span class="dim">— let's build.</span></div>
-    </div>
+  <div class="swipe">
+    SWIPE
+    <svg viewBox="0 0 60 34"><path d="M2 17 H46 M34 5 L48 17 L34 29" stroke="#DE8B66" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
 
   <div class="wm">@ollierdz</div>
-
-  <div class="save">
-    <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></svg>
-    <div class="txt">SAVE<br>POST!</div>
-  </div>
 </body></html>
