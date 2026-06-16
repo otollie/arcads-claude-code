@@ -15,9 +15,12 @@
 
 _Edit or replace with your real brand blocks (see `skills/<api>-external-api/prompting/brand-voice-starter.md` if present)._
 
-- **Tone:**
-- **Audience:**
+- **Tone:** Direct, practical, confident; teaches a "system." Punchy hooks, short lines.
+- **Audience:** Creators/builders curious about AI, Claude, and automation (@ollierdz).
 - **Words to use / avoid:**
+- **Hashtags:** Do NOT use hashtags on posts/captions. (Ollie's preference, 2026-06-16.)
+- **Handle / watermark:** `@ollierdz`.
+- **Carousel brand (dark system):** bg `#0A0720`, violet `#8B5CF6`, magenta `#E935C1`, cyan `#5BC8F5`, paper `#F4F2FF`; fonts Archivo Black (display) + Inter (body) + Instrument Serif italic (accent) + IBM Plex Mono (code/labels).
 
 ## Reference images
 
