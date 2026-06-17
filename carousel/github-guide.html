@@ -1,0 +1,140 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Archivo'; src: url('fonts/ArchivoVar.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'Inter'; src: url('fonts/InterVar.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'PlexMono'; src: url('canvas-fonts/IBMPlexMono-Regular.ttf'); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --canvas:#0D1117; --subtle:#161B22; --elev:#1C2128; --border:#30363D; --border-mute:#21262D;
+    --fg:#E6EDF3; --muted:#8B949E; --dim:#6E7681; --green:#2EA043; --green-br:#3FB950; --green-btn:#238636;
+    --blue:#58A6FF; --c1:#0E4429; --c2:#006D32; --c3:#26A641; --c4:#39D353;
+  }
+  body { font-family:'Inter',sans-serif; color:var(--fg); }
+  .page { position:relative; width:210mm; height:297mm; overflow:hidden; padding:22mm 19mm; page-break-after:always;
+    background: radial-gradient(420px 280px at 86% 4%, rgba(46,160,67,0.16), transparent 60%), var(--canvas); }
+  .page:last-child { page-break-after:auto; }
+  .pnum { position:absolute; bottom:11mm; right:19mm; font-family:'PlexMono',monospace; font-size:10pt; color:var(--dim); letter-spacing:0.1em; }
+  .foot { position:absolute; bottom:11mm; left:19mm; font-family:'PlexMono',monospace; font-size:10pt; color:var(--dim); letter-spacing:0.06em; }
+  .mk { width:30px; height:30px; fill:var(--fg); vertical-align:middle; }
+  .kicker { display:inline-flex; align-items:center; gap:10px; font-family:'PlexMono',monospace; font-weight:600; font-size:11pt; letter-spacing:0.14em; text-transform:uppercase; color:var(--green-br); }
+  .kicker .sq { width:14px; height:14px; border-radius:3px; background:var(--green-br); box-shadow:19px 0 var(--c2), 38px 0 var(--c1); }
+  h1 { font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-0.03em; line-height:1.0; }
+  h2 { font-family:'Archivo',sans-serif; font-weight:800; font-size:24pt; letter-spacing:-0.02em; }
+  .gr { color:var(--green-br); }
+  p { font-size:12.5pt; line-height:1.5; color:#C9D1D9; margin-bottom:10px; }
+  p b, li b { color:#fff; }
+  .lead { font-size:14pt; color:#E7E3FA; }
+  .card { background:var(--subtle); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin:12px 0; }
+  pre,code { font-family:'PlexMono',monospace; }
+  pre { font-size:11pt; line-height:1.7; color:#C9D1D9; white-space:pre-wrap; }
+  .cy{color:var(--blue)} .gn{color:var(--green-br)} .mu{color:var(--muted)} .wt{color:#fff}
+  ol{margin:6px 0 10px 20px} li{font-size:12.5pt; line-height:1.5; color:#C9D1D9; margin-bottom:7px}
+  .step { display:flex; align-items:center; gap:14px; margin-bottom:6px; }
+  .step .n { font-family:'Archivo',sans-serif; font-weight:800; font-size:15pt; width:38px; height:38px; flex:0 0 38px; border-radius:10px; display:grid; place-items:center; background:var(--green-btn); color:#fff; }
+  .btn { display:inline-block; background:var(--green-btn); color:#fff; font-weight:600; font-size:11pt; padding:7px 14px; border-radius:8px; }
+  .contrib { display:flex; gap:5px; margin-top:14px; }
+  .contrib i { width:16px; height:16px; border-radius:4px; }
+</style></head>
+<body>
+
+<!-- COVER -->
+<div class="page" style="display:flex; flex-direction:column; justify-content:center;">
+  <div class="kicker"><span class="sq"></span> Free guide · @ollierdz</div>
+  <h1 style="font-size:60pt; margin-top:22px;">Get Started<br>on <span class="gr">GitHub</span></h1>
+  <p class="lead" style="margin-top:22px; max-width:150mm;">From zero to your first <b>repo</b>, <b>commit</b>, and <b>push</b> — in plain English. No prior coding required.</p>
+  <div class="card" style="margin-top:24px; max-width:150mm;">
+    <pre><span class="mu"># what you'll have by the end of this guide</span>
+<span class="cy">github.com/</span><span class="wt">you</span><span class="cy">/my-first-project</span>
+  └─ <span class="wt">README.md</span>  <span class="gn">✓ committed</span>  <span class="gn">✓ pushed</span></pre>
+  </div>
+  <div class="contrib"><i style="background:#161B22"></i><i style="background:#0E4429"></i><i style="background:#006D32"></i><i style="background:#26A641"></i><i style="background:#39D353"></i><i style="background:#26A641"></i><i style="background:#006D32"></i></div>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">01</div>
+</div>
+
+<!-- STEP 1 -->
+<div class="page">
+  <div class="kicker"><span class="sq"></span> Step 1</div>
+  <h1 style="font-size:32pt; margin-top:12px;">Create your <span class="gr">account</span></h1>
+  <p style="margin-top:14px;">Head to <b>github.com</b> and click <span class="btn">Sign up</span>. Two minutes, free forever.</p>
+  <div class="card">
+    <div class="step"><div class="n">1</div><div>Enter your email, a password, and a <b>username</b>.</div></div>
+    <div class="step"><div class="n">2</div><div>Verify your email.</div></div>
+    <div class="step"><div class="n">3</div><div>You're in — that's your profile.</div></div>
+  </div>
+  <p><b>Your username matters.</b> It becomes your public URL: <code class="cy">github.com/your-name</code>. Keep it clean and on-brand — it's the link you'll share on your résumé and socials.</p>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">02</div>
+</div>
+
+<!-- STEP 2 -->
+<div class="page">
+  <div class="kicker"><span class="sq"></span> Step 2</div>
+  <h1 style="font-size:32pt; margin-top:12px;">Make your first <span class="gr">repository</span></h1>
+  <p style="margin-top:14px;">A repo is your project folder. Let's create one.</p>
+  <div class="card">
+    <div class="step"><div class="n">1</div><div>Click the <b>+</b> (top-right) → <b>New repository</b>.</div></div>
+    <div class="step"><div class="n">2</div><div>Name it <code class="gn">my-first-project</code>.</div></div>
+    <div class="step"><div class="n">3</div><div>Choose <b>Public</b> (anyone can see) or <b>Private</b> (just you).</div></div>
+    <div class="step"><div class="n">4</div><div>Tick <b>Add a README file</b>.</div></div>
+    <div class="step"><div class="n">5</div><div>Click <span class="btn">Create repository</span>.</div></div>
+  </div>
+  <p>🎉 You now have a live repo at <code class="cy">github.com/you/my-first-project</code>. The <b>README.md</b> is the front page everyone sees first.</p>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">03</div>
+</div>
+
+<!-- STEP 3 -->
+<div class="page">
+  <div class="kicker"><span class="sq"></span> Step 3</div>
+  <h1 style="font-size:32pt; margin-top:12px;">Your first <span class="gr">commit</span></h1>
+  <p style="margin-top:14px;">A commit = a saved snapshot. You can do this right in the browser — no install needed.</p>
+  <div class="card">
+    <div class="step"><div class="n">1</div><div>Open your repo and click <b>README.md</b>.</div></div>
+    <div class="step"><div class="n">2</div><div>Click the <b>pencil ✏️</b> to edit.</div></div>
+    <div class="step"><div class="n">3</div><div>Type something: <code class="wt"># My First Project</code></div></div>
+    <div class="step"><div class="n">4</div><div>Scroll down → write a short message → <span class="btn">Commit changes</span>.</div></div>
+  </div>
+  <div class="card">
+    <pre><span class="mu">Commit message</span>
+<span class="wt">Add project title to README</span>
+
+<span class="gn">✓ committed e4c5a90</span>  <span class="mu">— your first snapshot, saved forever</span></pre>
+  </div>
+  <p><b>Good messages</b> describe <i>what changed</i>, e.g. "Add contact form" — your future self will thank you.</p>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">04</div>
+</div>
+
+<!-- STEP 4 -->
+<div class="page">
+  <div class="kicker"><span class="sq"></span> Step 4 · level up</div>
+  <h1 style="font-size:30pt; margin-top:12px;">Work from your <span class="gr">computer</span></h1>
+  <p style="margin-top:14px;">Editing in the browser is fine to start. To build for real, use Git locally.</p>
+  <div class="card">
+    <p style="margin-bottom:8px;"><b>1. Install Git</b> from <code class="cy">git-scm.com</code>.</p>
+    <p style="margin-bottom:8px;"><b>2. Copy your repo down</b> (clone it):</p>
+    <pre><span class="gn">git</span> clone https://github.com/<span class="wt">you</span>/my-first-project.git</pre>
+  </div>
+  <div class="card">
+    <p style="margin-bottom:8px;"><b>3. The everyday loop</b> — make changes, then:</p>
+    <pre><span class="gn">git</span> add .                        <span class="mu"># stage your changes</span>
+<span class="gn">git</span> commit -m <span class="cy">"what I changed"</span>   <span class="mu"># save a snapshot</span>
+<span class="gn">git</span> push                         <span class="mu"># send it to GitHub</span></pre>
+  </div>
+  <p>That's 90% of daily Git: <b>add → commit → push</b>. Everything else you'll learn as you go.</p>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">05</div>
+</div>
+
+<!-- NEXT + CTA -->
+<div class="page">
+  <div class="kicker"><span class="sq"></span> What's next</div>
+  <h1 style="font-size:32pt; margin-top:12px;">Keep <span class="gr">building</span></h1>
+  <div class="card"><p style="margin-bottom:0;"><b>⭐ Star</b> repos you love — it's your bookmark + a thank-you to the author.</p></div>
+  <div class="card"><p style="margin-bottom:0;"><b>🍴 Fork</b> a project to make your own copy and experiment freely.</p></div>
+  <div class="card"><p style="margin-bottom:0;"><b>🌱 Build in public</b> — commit a little every day and watch your contribution graph fill in green.</p></div>
+  <div class="card" style="border-color:rgba(46,160,67,0.5); background:rgba(46,160,67,0.10); margin-top:18px;">
+    <h2 style="font-size:16pt;">Want the rest of the system?</h2>
+    <p style="margin:8px 0 0;">Follow <b>@ollierdz</b> for the carousels, skills, and workflows I use to ship faster with AI.</p>
+  </div>
+  <div class="contrib"><i style="background:#0E4429"></i><i style="background:#006D32"></i><i style="background:#26A641"></i><i style="background:#39D353"></i><i style="background:#26A641"></i><i style="background:#39D353"></i><i style="background:#006D32"></i><i style="background:#39D353"></i><i style="background:#26A641"></i></div>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">06</div>
+</div>
+
+</body></html>
