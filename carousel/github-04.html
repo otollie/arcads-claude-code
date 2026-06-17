@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="github-base.css">
+<style>
+  .vs { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; position: relative; }
+  .vscard { padding: 34px 30px; }
+  .vscard .lbl { font-family:'PlexMono',monospace; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .vscard .nm { font-family:'Archivo',sans-serif; font-weight: 800; font-size: 46px; margin-top: 8px; }
+  .vscard .nm.git { color: var(--fg); } .vscard .nm.hub { color: var(--green-br); }
+  .vscard .ds { font-size: 23px; color: #c9d1d9; margin-top: 16px; line-height: 1.4; }
+  .vscard ul { margin: 16px 0 0 4px; list-style: none; }
+  .vscard li { font-size: 20px; color: var(--muted); padding-left: 28px; position: relative; margin-bottom: 10px; }
+  .vscard li::before { content:""; position: absolute; left: 0; top: 8px; width: 12px; height: 12px; border-radius: 3px; background: var(--green-br); }
+  .vsmid { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 72px; height: 72px; border-radius: 50%; background: var(--canvas); border: 1px solid var(--border); display: grid; place-items: center; font-family:'Archivo',sans-serif; font-weight: 800; font-size: 30px; color: var(--fg); z-index: 3; }
+</style></head>
+<body>
+  <div class="topbar">
+    <div class="brandmark"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="hl">@ollierdz</span></div>
+    <span class="eyebrow-top">Clear this up</span>
+    <span class="counter">4/9</span>
+    <div class="rule"></div>
+  </div>
+
+  <div class="content">
+    <div class="kicker"><span class="sq"></span> The #1 confusion</div>
+    <div class="h" style="font-size: 84px; margin-top: 28px;">Git <span style="color:var(--muted);">≠</span> <span class="gr">GitHub</span></div>
+    <div class="lead" style="margin-top: 24px; max-width: 880px;">People use them interchangeably. They're not the same thing.</div>
+
+    <div class="vs">
+      <div class="vscard card">
+        <div class="lbl">The tool</div>
+        <div class="nm git">Git</div>
+        <div class="ds">Software on <b style="color:#fff;">your computer</b> that tracks every change you make.</div>
+        <ul><li>Works offline</li><li>Created by Linus Torvalds</li><li>"Version control"</li></ul>
+      </div>
+      <div class="vscard card">
+        <div class="lbl">The website</div>
+        <div class="nm hub">GitHub</div>
+        <div class="ds">An <b style="color:#fff;">online home</b> for your Git projects — plus collaboration.</div>
+        <ul><li>Lives in the cloud</li><li>Owned by Microsoft</li><li>Share &amp; work together</li></ul>
+      </div>
+      <div class="vsmid">vs</div>
+    </div>
+  </div>
+  <div class="wm">ollierdz · 2026</div>
+</body></html>
