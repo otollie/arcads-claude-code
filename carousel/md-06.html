@@ -1,36 +1,38 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="md-base.css">
 <style>
-  .mini { margin-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .minic { display:flex; align-items:center; gap:16px; padding:22px 24px; }
-  .minic .mi { font-family:'PlexMono',monospace; font-weight:700; font-size:22px; color:var(--blue-br); }
-  .minic .mt { font-size:24px; color:#fff; font-weight:700; }
-  .ctacard { margin-top:auto; padding:38px 42px; border-color:rgba(88,166,255,0.5); background:rgba(88,166,255,0.10); }
-  .ctacard .big { font-family:'Archivo',sans-serif; font-weight:800; font-size:42px; color:#fff; }
-  .ctacard .big .kw { color:var(--blue-br); }
-  .ctacard .sub { font-size:26px; color:#c9d1d9; margin-top:12px; line-height:1.4; }
+  .cheat { margin-top:auto; }
+  .crow { display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid var(--border-mute); }
+  .crow:last-child { border-bottom:none; }
+  .crow .l { font-family:'PlexMono',monospace; font-size:23px; color:#C9D1D9; padding:17px 26px; border-right:1px solid var(--border-mute); }
+  .crow .l .sym { color:var(--blue-br); }
+  .crow .r { padding:17px 26px; display:flex; align-items:center; }
+  .crow .r h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:28px; color:#fff; }
+  .crow .r .bd { font-weight:800; color:#fff; font-size:23px; }
+  .crow .r .it { font-style:italic; color:#C9D1D9; font-size:23px; }
+  .crow .r ul { margin-left:20px; } .crow .r li { font-size:21px; color:#C9D1D9; }
+  .crow .r a { color:var(--blue-br); text-decoration:underline; font-size:22px; }
+  .crow .r code { font-family:'PlexMono',monospace; background:var(--elev); border:1px solid var(--border); border-radius:6px; padding:1px 9px; font-size:19px; color:var(--cyan); }
 </style></head>
 <body>
   <div class="topbar">
     <div class="brandmark"><svg viewBox="0 0 208 128"><rect x="5" y="5" width="198" height="118" rx="12" fill="none" stroke="#E6EDF3" stroke-width="12"/><path fill="#E6EDF3" d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39zm125 0l-30-33h20V30h20v35h20z"/></svg><span class="hl">@ollierdz</span></div>
-    <span class="eyebrow-top">Recap</span>
-    <span class="counter">6/6</span>
+    <span class="eyebrow-top">The syntax</span>
+    <span class="counter">6/7</span>
     <div class="rule"></div>
   </div>
 
   <div class="content">
-    <div class="kicker">The takeaway</div>
-    <div class="h" style="font-size:80px; margin-top:24px;">Markdown = <span class="gr">formatting<br>without the fuss.</span></div>
+    <div class="kicker">You only need ~6 symbols</div>
+    <div class="h" style="font-size:70px; margin-top:24px;">The whole <span class="gr">cheat sheet.</span></div>
 
-    <div class="mini">
-      <div class="card minic"><span class="mi">#</span><span class="mt">Type symbols</span></div>
-      <div class="card minic"><span class="mi">✦</span><span class="mt">Get formatting</span></div>
-      <div class="card minic"><span class="mi">.md</span><span class="mt">Save as a file</span></div>
-      <div class="card minic"><span class="mi">🌐</span><span class="mt">Use it anywhere</span></div>
-    </div>
-
-    <div class="ctacard card">
-      <div class="big">Comment <span class="kw">MARKDOWN</span></div>
-      <div class="sub">…and I'll send you my free <b style="color:#fff;">Markdown Quick-Start</b> guide (cheat sheet + how to set up). Then follow <b style="color:#fff;">@ollierdz</b>.</div>
+    <div class="win cheat">
+      <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="addr">type  →  get</span></div>
+      <div class="crow"><div class="l"><span class="sym"># </span>Title</div><div class="r"><h3>Title</h3></div></div>
+      <div class="crow"><div class="l"><span class="sym">**</span>bold<span class="sym">**</span></div><div class="r"><span class="bd">bold</span></div></div>
+      <div class="crow"><div class="l"><span class="sym">*</span>italic<span class="sym">*</span></div><div class="r"><span class="it">italic</span></div></div>
+      <div class="crow"><div class="l"><span class="sym">- </span>item</div><div class="r"><ul><li>item</li></ul></div></div>
+      <div class="crow"><div class="l"><span class="sym">[</span>link<span class="sym">](url)</span></div><div class="r"><a>link</a></div></div>
+      <div class="crow"><div class="l"><span class="sym">`</span>code<span class="sym">`</span></div><div class="r"><code>code</code></div></div>
     </div>
   </div>
   <div class="wm">ollierdz · 2026</div>

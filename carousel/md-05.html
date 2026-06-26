@@ -1,27 +1,28 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="md-base.css">
 <style>
-  .places { margin-top:auto; display:flex; flex-direction:column; gap:16px; }
-  .place { display:flex; align-items:center; gap:22px; padding:24px 28px; }
-  .place .tag { font-family:'PlexMono',monospace; font-size:21px; color:var(--cyan); background:var(--elev); border:1px solid var(--border); border-radius:8px; padding:8px 16px; flex:0 0 auto; }
-  .place .pt { font-size:26px; color:#E7E3FA; } .place .pt b { color:#fff; }
+  .feats { margin-top:auto; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  .feat { padding:26px 26px; }
+  .feat .ft { font-family:'Archivo',sans-serif; font-weight:800; font-size:28px; color:#fff; }
+  .feat .ft .e { color:var(--blue-br); margin-right:10px; }
+  .feat .fd { font-size:21px; color:var(--muted); margin-top:8px; line-height:1.35; }
 </style></head>
 <body>
   <div class="topbar">
     <div class="brandmark"><svg viewBox="0 0 208 128"><rect x="5" y="5" width="198" height="118" rx="12" fill="none" stroke="#E6EDF3" stroke-width="12"/><path fill="#E6EDF3" d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39zm125 0l-30-33h20V30h20v35h20z"/></svg><span class="hl">@ollierdz</span></div>
-    <span class="eyebrow-top">Where you'll see it</span>
-    <span class="counter">5/6</span>
+    <span class="eyebrow-top">Why it wins</span>
+    <span class="counter">5/7</span>
     <div class="rule"></div>
   </div>
 
   <div class="content">
-    <div class="kicker">It's everywhere</div>
-    <div class="h" style="font-size:74px; margin-top:24px;">Once you spot it,<br>you'll <span class="gr">see it everywhere.</span></div>
+    <div class="kicker">Why everyone uses it</div>
+    <div class="h" style="font-size:78px; margin-top:24px;">Simple beats<br><span class="gr">complicated.</span></div>
 
-    <div class="places">
-      <div class="place card"><span class="tag">README.md</span><span class="pt">The front page of every <b>GitHub</b> project.</span></div>
-      <div class="place card"><span class="tag">SKILL.md</span><span class="pt">How you teach <b>Claude</b> a new skill.</span></div>
-      <div class="place card"><span class="tag">.md notes</span><span class="pt"><b>Obsidian</b> &amp; <b>Notion</b> run on it.</span></div>
-      <div class="place card"><span class="tag">AI chats</span><span class="pt">Prompts &amp; answers are formatted in <b>Markdown</b>.</span></div>
+    <div class="feats">
+      <div class="feat card"><div class="ft"><span class="e">⚡</span>Fast</div><div class="fd">Format as you type — no mouse, no menus, no Word.</div></div>
+      <div class="feat card"><div class="ft"><span class="e">📦</span>Portable</div><div class="fd">It's just text. Opens anywhere and never corrupts.</div></div>
+      <div class="feat card"><div class="ft"><span class="e">⏳</span>Future-proof</div><div class="fd">Readable in 20 years — no app or licence required.</div></div>
+      <div class="feat card"><div class="ft"><span class="e">🌐</span>Universal</div><div class="fd">GitHub, Notion, Obsidian, and AI tools all speak it.</div></div>
     </div>
   </div>
   <div class="wm">ollierdz · 2026</div>
