@@ -1,38 +1,29 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="md-base.css">
 <style>
-  .cheat { margin-top:auto; }
-  .crow { display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid var(--border-mute); }
-  .crow:last-child { border-bottom:none; }
-  .crow .l { font-family:'PlexMono',monospace; font-size:23px; color:#C9D1D9; padding:17px 26px; border-right:1px solid var(--border-mute); }
-  .crow .l .sym { color:var(--blue-br); }
-  .crow .r { padding:17px 26px; display:flex; align-items:center; }
-  .crow .r h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:28px; color:#fff; }
-  .crow .r .bd { font-weight:800; color:#fff; font-size:23px; }
-  .crow .r .it { font-style:italic; color:#C9D1D9; font-size:23px; }
-  .crow .r ul { margin-left:20px; } .crow .r li { font-size:21px; color:#C9D1D9; }
-  .crow .r a { color:var(--blue-br); text-decoration:underline; font-size:22px; }
-  .crow .r code { font-family:'PlexMono',monospace; background:var(--elev); border:1px solid var(--border); border-radius:6px; padding:1px 9px; font-size:19px; color:var(--cyan); }
+  .store { margin-top:auto; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  .st { padding:26px 26px; }
+  .st .ic { font-size:32px; }
+  .st .stt { font-family:'Archivo',sans-serif; font-weight:800; font-size:25px; color:#fff; margin-top:10px; }
+  .st .std { font-size:20px; color:var(--muted); margin-top:6px; line-height:1.35; }
 </style></head>
 <body>
   <div class="topbar">
     <div class="brandmark"><svg viewBox="0 0 208 128"><rect x="5" y="5" width="198" height="118" rx="12" fill="none" stroke="#E6EDF3" stroke-width="12"/><path fill="#E6EDF3" d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39zm125 0l-30-33h20V30h20v35h20z"/></svg><span class="hl">@ollierdz</span></div>
-    <span class="eyebrow-top">The syntax</span>
+    <span class="eyebrow-top">Where they live</span>
     <span class="counter">6/7</span>
     <div class="rule"></div>
   </div>
 
   <div class="content">
-    <div class="kicker">You only need ~6 symbols</div>
-    <div class="h" style="font-size:70px; margin-top:24px;">The whole <span class="gr">cheat sheet.</span></div>
+    <div class="kicker">A fair question</div>
+    <div class="h" style="font-size:72px; margin-top:22px;">Where are they<br><span class="gr">stored?</span></div>
+    <div class="lead" style="margin-top:22px; max-width:900px;">Wherever you save them. A <b>.md</b> is a normal file — never trapped inside one app.</div>
 
-    <div class="win cheat">
-      <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="addr">type  →  get</span></div>
-      <div class="crow"><div class="l"><span class="sym"># </span>Title</div><div class="r"><h3>Title</h3></div></div>
-      <div class="crow"><div class="l"><span class="sym">**</span>bold<span class="sym">**</span></div><div class="r"><span class="bd">bold</span></div></div>
-      <div class="crow"><div class="l"><span class="sym">*</span>italic<span class="sym">*</span></div><div class="r"><span class="it">italic</span></div></div>
-      <div class="crow"><div class="l"><span class="sym">- </span>item</div><div class="r"><ul><li>item</li></ul></div></div>
-      <div class="crow"><div class="l"><span class="sym">[</span>link<span class="sym">](url)</span></div><div class="r"><a>link</a></div></div>
-      <div class="crow"><div class="l"><span class="sym">`</span>code<span class="sym">`</span></div><div class="r"><code>code</code></div></div>
+    <div class="store">
+      <div class="st card"><div class="ic">💻</div><div class="stt">On your computer</div><div class="std">Any folder — same as a Word doc or photo.</div></div>
+      <div class="st card"><div class="ic">📁</div><div class="stt">Inside a project</div><div class="std">Saved right next to the code (a "repo").</div></div>
+      <div class="st card"><div class="ic">🗄️</div><div class="stt">In your notes app</div><div class="std">Obsidian keeps real .md files on your disk.</div></div>
+      <div class="st card"><div class="ic">☁️</div><div class="stt">On GitHub</div><div class="std">In the cloud, so you can share or back it up.</div></div>
     </div>
   </div>
   <div class="wm">ollierdz · 2026</div>

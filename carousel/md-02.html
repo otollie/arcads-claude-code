@@ -1,23 +1,39 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="md-base.css"></head>
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="md-base.css">
+<style>
+  .cmp { margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .cmp .p { padding:30px 30px; }
+  .cmp .lab { font-family:'PlexMono',monospace; font-size:18px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+  .cmp .method { font-size:24px; color:#C9D1D9; margin-top:18px; line-height:1.4; }
+  .btnB { display:inline-grid; place-items:center; width:42px; height:42px; border-radius:8px; background:var(--elev); border:1px solid var(--border); font-family:'Archivo'; font-weight:800; font-size:24px; color:#fff; vertical-align:middle; }
+  .codechip { font-family:'PlexMono',monospace; font-size:24px; color:var(--blue-br); }
+  .arrow { color:var(--dim); margin:18px 0 8px; font-size:20px; }
+  .result { font-family:'Archivo',sans-serif; font-weight:800; font-size:34px; color:#fff; }
+</style></head>
 <body>
   <div class="topbar">
     <div class="brandmark"><svg viewBox="0 0 208 128"><rect x="5" y="5" width="198" height="118" rx="12" fill="none" stroke="#E6EDF3" stroke-width="12"/><path fill="#E6EDF3" d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39zm125 0l-30-33h20V30h20v35h20z"/></svg><span class="hl">@ollierdz</span></div>
-    <span class="eyebrow-top">The definition</span>
+    <span class="eyebrow-top">In one sentence</span>
     <span class="counter">2/7</span>
     <div class="rule"></div>
   </div>
 
   <div class="content">
-    <div class="kicker">So… what is it?</div>
-    <div class="h" style="font-size:62px; margin-top:24px;">Markdown is a simple way to <span class="gr">format plain text.</span></div>
-    <div class="lead" style="margin-top:24px; max-width:920px;">You add small symbols like <b>#</b> or <b>**</b> while you type, and they turn into <b>headings, bold, and lists</b> when the text is displayed. A file saved with a <b>.md</b> ending is simply text written this way.</div>
-    <div class="lead" style="margin-top:18px; font-size:25px; color:var(--muted); max-width:900px;">Think of it as the easy, readable cousin of HTML — power without the tags.</div>
+    <div class="kicker">The simplest way to get it</div>
+    <div class="h" style="font-size:74px; margin-top:24px;">Formatting —<br>without the <span class="gr">buttons.</span></div>
+    <div class="lead" style="margin-top:26px; max-width:900px;">In Word or Google Docs you <b>click a button</b> to make text bold. In Markdown, you <b>type a symbol</b> instead. Same result — your hands never leave the keyboard.</div>
 
-    <div class="win" style="margin-top:auto;">
-      <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="addr">about.md</span></div>
-      <div class="md2">
-        <div class="raw"><div class="paneflag">plain text you write</div><span class="sym">#</span> About me<br><br>I build with <span class="sym">**</span>AI<span class="sym">**</span>.</div>
-        <div class="rendered"><div class="paneflag">how it displays</div><h3>About me</h3><p>I build with <span class="b">AI</span>.</p></div>
+    <div class="cmp">
+      <div class="p card">
+        <div class="lab">Word / Google Docs</div>
+        <div class="method">Select the word, then click <span class="btnB">B</span></div>
+        <div class="arrow">↓ gives you</div>
+        <div class="result">bold</div>
+      </div>
+      <div class="p card" style="border-color:rgba(88,166,255,0.45);">
+        <div class="lab" style="color:var(--blue-br);">Markdown</div>
+        <div class="method">Just type <span class="codechip">**bold**</span></div>
+        <div class="arrow">↓ gives you</div>
+        <div class="result">bold</div>
       </div>
     </div>
   </div>
