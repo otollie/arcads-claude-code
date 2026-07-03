@@ -3,8 +3,7 @@
 Status: ACTIVE for all personal-brand carousels as of 2026-07-03.
 
 ## Identity
-- Handle / watermark: `@orad215` ← CONFIRM SPELLING (user typed both "orad215" and
-  "orod215" in the same message, 2026-07-03). Do not render a final deck until confirmed.
+- Handle / watermark: `@orod215` (confirmed 2026-07-03; "@orad215" was a typo, no such handle)
 - Platform focus: TikTok first, LinkedIn second. Instagram (@ollierdz) is retired for now —
   do NOT watermark new decks with @ollierdz.
 - Audience: creators/builders curious about AI, tools, and automation.
