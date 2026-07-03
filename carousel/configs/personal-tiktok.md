@@ -26,5 +26,9 @@ Status: ACTIVE for all personal-brand carousels as of 2026-07-03.
 - Only use Ollie's face when he provides the photo for that specific task. Never reuse a
   saved photo without him handing it over again.
 
+## Output size
+- 1080×1920 (9:16 vertical), verified 2026-07-03. Respect TikTok safe zones: top ~100px,
+  bottom ~300px, right ~150px. Keep headline/face/key content in a centered safe column.
+
 ## Default CTA
 - "Follow @<handle> for more" (plain follow; TikTok has no comment-keyword DM tool).

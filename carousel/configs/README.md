@@ -42,7 +42,12 @@ never a rebuild. Read the relevant config before any build.
 
 ## Output
 - Final slides: PNG. Size: current TikTok carousel dimensions — verify via web search
-  about monthly (don't trust a saved number; last verified: never). Ollie can override.
+  about monthly (don't trust a saved number). **Last verified 2026-07-03: 1080×1920
+  (9:16 vertical), native full-screen.** Next re-check ~2026-08. Ollie can override.
+- TikTok safe zones (keep headlines/faces/key content centered, away from UI overlays):
+  top ~100px = Following/For You tabs; bottom ~300px = caption, handle, sound;
+  right ~150px = like/comment/share/bookmark. Design a centered safe column with
+  generous top/bottom margins so nothing important sits under the chrome.
 - Render pipeline: HTML/CSS per slide → `node render.mjs <files>` (Playwright,
   PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers) → PNG at 2× scale.
 - After approval, deliver caption + CTA. No hashtags, no em dashes, no AI jargon.
