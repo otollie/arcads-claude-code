@@ -16,8 +16,19 @@ never a rebuild. Read the relevant config before any build.
 3. Ollie picks one.
 4. If category is Drop: web-search first to verify the feature exists and what it does.
    Never invent specs. Can't confirm = say so.
-5. Show full slide copy as PLAIN TEXT and wait for approval. Never render first.
-6. After approval: render, deliver PNGs, then caption + CTA. No hashtags.
+5. BEFORE drafting copy, read the vendored marketing skills (MIT, coreyhaines31/marketingskills):
+   - `skills/social/references/post-templates.md` — hook formulas (curiosity, story,
+     value, contrarian, social proof) + carousel structure. Draft 3+ hooks from these
+     formulas, pick the strongest.
+   - `skills/copywriting/SKILL.md` — principles: clarity over cleverness, benefits over
+     features, specificity over vagueness, customer language, one idea per section.
+   - `skills/marketing-psychology/SKILL.md` — pick 1-2 levers (curiosity gap, loss
+     aversion, social proof) and build the deck arc around them.
+   Assume the audience knows nothing: no insider names/tiers without a plain-English
+   gloss. Every "what it does" claim must answer "so what, don't all AIs do that?"
+6. Show full slide copy as PLAIN TEXT and wait for approval. Never render first.
+7. Run a `skills/copy-editing` pass on approved copy before building slides.
+8. After approval: render, deliver PNGs, then caption + CTA. No hashtags.
 
 ## Categories (fixed skeletons; more may be added)
 - **Breakdown** — defines a tool/feature, what it does, how to use it.
