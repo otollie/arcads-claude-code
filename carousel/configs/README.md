@@ -16,7 +16,12 @@ never a rebuild. Read the relevant config before any build.
 3. Ollie picks one.
 4. If category is Drop: web-search first to verify the feature exists and what it does.
    Never invent specs. Can't confirm = say so.
-5. BEFORE drafting copy, read the vendored marketing skills (MIT, coreyhaines31/marketingskills):
+5. BEFORE drafting copy, read the vendored skills:
+   - `skills/viral-tiktok-hooks/SKILL.md` (Apache-2.0, gonzalochale/skills) — PRIMARY for
+     TikTok decks. Use its Hook Engine (6 angles x shapes), Format Library (A-H), 15-25
+     words per slide cap, 3-line slide structure, anti-repetition rule (never same format
+     twice in a row; log format+angle used in the deck's content notes).
+   - Then the marketingskills set (MIT, coreyhaines31/marketingskills):
    - `skills/social/references/post-templates.md` — hook formulas (curiosity, story,
      value, contrarian, social proof) + carousel structure. Draft 3+ hooks from these
      formulas, pick the strongest.
