@@ -1,0 +1,98 @@
+/* ============================================================
+   TikTok carousel base — ONE shared, themeable stylesheet.
+   Canvas: 1080x1920 (9:16), verified 2026-07-03.
+   Safe zones: top ~120px (tabs), bottom ~320px (caption/sound),
+   right ~160px (like/share rail). Content lives in .safe.
+   Theme = CSS vars set per deck in a tiny <style> block.
+   Do NOT fork this file per deck.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face { font-family: 'Poppins'; src: url('fonts/Poppins-SemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'Poppins'; src: url('fonts/Poppins-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Lora'; src: url('fonts/Lora[wght].ttf'); font-weight: 400 700; }
+
+:root {
+  /* theme contract — override per deck/business */
+  --bg: #FAF9F5;
+  --ink: #141413;
+  --muted: #6b6a64;
+  --accent: #D97757;
+  --surface: #E8E6DC;
+  --surface-ink: #141413;
+  --chip-bg: #141413;
+  --chip-ink: #FAF9F5;
+  --font-display: 'Poppins', Arial, sans-serif;
+  --font-body: 'Lora', Georgia, serif;
+}
+
+body {
+  width: 1080px; height: 1920px;
+  overflow: hidden; position: relative;
+  background: var(--bg);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+/* content column inside platform-safe area */
+.safe {
+  position: absolute;
+  top: 240px; bottom: 380px; left: 72px; right: 170px;
+  display: flex; flex-direction: column; z-index: 5;
+}
+
+/* ---- wrapper chrome (business = outer wrapper) ---- */
+.handle {
+  position: absolute; top: 140px; left: 72px; z-index: 9;
+  font-family: var(--font-display); font-weight: 600; font-size: 30px;
+  color: var(--chip-ink); background: var(--chip-bg);
+  padding: 12px 28px; border-radius: 999px;
+}
+.counter {
+  position: absolute; top: 152px; right: 170px; z-index: 9;
+  font-family: var(--font-display); font-weight: 600; font-size: 28px;
+  color: var(--ink); opacity: 0.55;
+}
+.wm {
+  position: absolute; bottom: 340px; left: 72px; z-index: 9;
+  font-family: var(--font-display); font-weight: 500; font-size: 26px;
+  color: var(--muted);
+}
+
+/* ---- copy primitives (caps enforced at authoring) ---- */
+.tag {
+  align-self: flex-start;
+  font-family: var(--font-display); font-weight: 600; font-size: 27px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent);
+  border: 2.5px solid var(--accent); border-radius: 999px;
+  padding: 12px 30px;
+}
+.h { /* headline: <= 8 words */
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 96px; line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.h .a { color: var(--accent); }
+.sup { /* support: <= 2 lines */
+  font-family: var(--font-body); font-size: 42px; line-height: 1.45;
+  color: var(--muted);
+}
+.sup b { color: var(--ink); font-weight: 600; }
+
+/* ---- surfaces ---- */
+.card {
+  background: var(--surface); color: var(--surface-ink);
+  border-radius: 28px; padding: 40px 44px;
+}
+.row { display: flex; align-items: center; gap: 28px; }
+
+/* browser / window mockup */
+.win { background: #fff; border-radius: 24px; overflow: hidden;
+  box-shadow: 0 24px 80px rgba(20,20,19,0.14); }
+.win .bar { height: 56px; background: var(--surface);
+  display: flex; align-items: center; gap: 11px; padding: 0 24px; }
+.win .bar i { width: 15px; height: 15px; border-radius: 50%; background: rgba(20,20,19,0.18); display: block; }
+.win .bar .addr { margin-left: 14px; font-family: var(--font-display); font-weight: 500;
+  font-size: 19px; color: var(--muted); }

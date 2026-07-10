@@ -3,16 +3,20 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const files = process.argv.slice(2);
+const args = process.argv.slice(2);
+const sizeArg = args.find(a => a.startsWith('--size='));
+const files = args.filter(a => !a.startsWith('--'));
 if (files.length === 0) {
-  console.error('usage: node render.mjs slide-01.html [slide-02.html ...]');
+  console.error('usage: node render.mjs [--size=1080x1920] slide-01.html [...]');
   process.exit(1);
 }
+const [w, h] = (sizeArg ? sizeArg.split('=')[1] : '1080x1350').split('x').map(Number);
 
-const browser = await chromium.launch();
+// remote env pre-installs chromium; avoids playwright-version browser downloads
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const page = await browser.newPage({
-  viewport: { width: 1080, height: 1350 },
-  deviceScaleFactor: 2, // 2160x2700 export for crispness
+  viewport: { width: w, height: h },
+  deviceScaleFactor: 2, // 2x export for crispness
 });
 
 for (const f of files) {
