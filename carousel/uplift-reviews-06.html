@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  .pad { gap: 34px; }
+  .pack { width: 82%; padding: 30px 34px; margin-top: 12px; }
+  .aihead { display: flex; align-items: center; gap: 12px; font-family: var(--font-display);
+    font-weight: 600; font-size: 22px; color: var(--accent-2); margin-bottom: 18px; }
+  .spark { width: 28px; height: 28px; border-radius: 50%; background: var(--grad); }
+  .r { display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 16px; }
+  .r.win { background: var(--soft); border: 3px solid var(--accent); margin-bottom: 10px; }
+  .dot { width: 46px; height: 46px; border-radius: 12px; background: #dfe7f2; flex-shrink: 0; }
+  .dot.you { background: var(--grad); }
+  .nm { font-weight: 800; font-size: 27px; }
+  .st { font-size: 20px; color: var(--muted); }
+  .win .st b { color: var(--accent-2); }
+  .others { opacity: 0.5; }
+</style></head>
+<body>
+  <div class="counter">6/7</div>
+  <div class="pad">
+    <div class="kick">the after</div>
+    <div class="h">Be the clinic Google's AI <span class="g">names first</span>.</div>
+    <div class="sup">A steady flow of recent 5-star reviews. New patients finding <b>you</b> before the clinic down the road.</div>
+    <div class="card pack">
+      <div class="aihead"><span class="spark"></span> AI answer · "best physical therapy near me"</div>
+      <div class="r win"><span class="dot you"></span><div><div class="nm">Your clinic</div><div class="st stars">★★★★★ <b>4.9 · 214 reviews · new this week</b></div></div></div>
+      <div class="r others"><span class="dot"></span><div><div class="nm">The clinic down the road</div><div class="st">mentioned below the fold</div></div></div>
+    </div>
+  </div>
+  <div class="swipe">→</div>
+</body></html>
