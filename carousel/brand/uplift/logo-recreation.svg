@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <!-- RECREATION of the Uplift Marketing wordmark (typeset approximation,
+       NOT the official logo file). Swap for the real asset when available. -->
+  <defs>
+    <linearGradient id="up" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#29A8DB"/>
+      <stop offset="100%" stop-color="#1F6FC4"/>
+    </linearGradient>
+  </defs>
+  <text x="450" y="165" text-anchor="middle"
+        font-family="Sora, Arial, sans-serif" font-weight="800" font-size="150"
+        letter-spacing="2" fill="url(#up)">UPLIFT</text>
+  <text x="450" y="245" text-anchor="middle"
+        font-family="Sora, Arial, sans-serif" font-weight="600" font-size="52"
+        letter-spacing="26" fill="#1F6FC4">MARKETING</text>
+</svg>
