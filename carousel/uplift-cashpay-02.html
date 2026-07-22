@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  :root { --bg:#0D1F4E; --ink:#FFFFFF; --muted:#9fb2d6; --accent:#38B6E8; --accent-2:#7cc9ec;
+    --soft:#16295e; --grad:linear-gradient(135deg,#38B6E8,#7ee0ff); }
+  .kick { background:rgba(56,182,232,0.16); color:#7cc9ec; }
+  .counter { color:#fff; }
+  .pad { gap:34px; }
+  .bars { margin-top:22px; display:flex; flex-direction:column; gap:30px; }
+  .barrow { display:flex; align-items:center; gap:24px; }
+  .lbl { font-family:var(--font-display); font-weight:600; font-size:30px; width:230px; color:#cdd9ef; }
+  .bar { height:56px; border-radius:12px; }
+  .bar.full { flex:1; background:linear-gradient(135deg,#38B6E8,#7ee0ff); }
+  .bar.short { width:32%; background:#33477a; }
+  .tag { font-family:var(--font-body); font-weight:700; font-size:24px; color:#9fb2d6; }
+  .site { position:absolute; bottom:64px; left:90px; z-index:9;
+    font-family:var(--font-display); font-weight:600; font-size:26px; color:#7cc9ec; opacity:0.85; }
+  .swipe { color:var(--accent-2); }
+</style></head>
+<body>
+  <div class="counter">2/7</div>
+  <div class="pad">
+    <div class="kick">the cost</div>
+    <div class="h">Denials. Clawbacks.<br>Shrinking rates.</div>
+    <div class="sup" style="color:#9fb2d6">You do the work. <b style="color:#fff">They decide the pay.</b></div>
+    <div class="bars">
+      <div class="barrow"><span class="lbl">You billed</span><span class="bar full"></span></div>
+      <div class="barrow"><span class="lbl">They paid</span><span class="bar short"></span><span class="tag">after denials</span></div>
+    </div>
+  </div>
+  <div class="site">uplift.marketing</div>
+  <div class="swipe">→</div>
+</body></html>
