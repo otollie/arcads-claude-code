@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  @font-face { font-family:'Anton'; src:url('fonts/Anton-Regular.ttf'); }
+  @font-face { font-family:'Inter'; src:url('fonts/InterVar.ttf'); font-weight:100 900; }
+  body { width:1500px; height:1500px; position:relative; overflow:hidden;
+    font-family:'Inter',Arial,sans-serif; background:#0A0720; }
+
+  .photo { position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:50% 42%; }
+
+  /* legibility scrims */
+  .scrim-top { position:absolute; top:0; left:0; right:0; height:44%; z-index:2;
+    background:linear-gradient(180deg, rgba(10,7,32,0.82) 0%, rgba(10,7,32,0.35) 55%, rgba(10,7,32,0) 100%); }
+  .scrim-bot { position:absolute; bottom:0; left:0; right:0; height:38%; z-index:2;
+    background:linear-gradient(0deg, rgba(10,7,32,0.9) 0%, rgba(10,7,32,0.4) 55%, rgba(10,7,32,0) 100%); }
+
+  /* title block top-left */
+  .title { position:absolute; top:86px; left:96px; right:96px; z-index:4;
+    font-family:'Anton',sans-serif; text-transform:uppercase; line-height:0.92;
+    color:#fff; letter-spacing:0.5px; }
+  .title .l1 { font-size:150px; text-shadow:0 6px 30px rgba(0,0,0,0.5); }
+  .title .l2 { margin-top:10px; }
+  .box { display:inline-block; font-size:178px; color:#fff; line-height:1;
+    padding:6px 40px 22px; border-radius:22px;
+    background:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
+    box-shadow:0 14px 46px rgba(233,53,193,0.45); }
+
+  /* tagline + footer bottom */
+  .tag { position:absolute; bottom:150px; left:100px; right:100px; z-index:4;
+    font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:2px;
+    font-size:58px; color:#fff; line-height:1.05; text-shadow:0 4px 20px rgba(0,0,0,0.6); }
+  .tag b { color:#C9B6FF; }
+  .foot { position:absolute; bottom:82px; left:100px; z-index:4;
+    display:flex; align-items:center; gap:18px;
+    font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:3px;
+    font-size:34px; color:#e9e4ff; }
+  .dots { display:flex; gap:9px; }
+  .dots i { width:16px; height:16px; border-radius:50%; display:block; }
+  .dots i:nth-child(1){ background:#8B5CF6; }
+  .dots i:nth-child(2){ background:#E935C1; }
+  .dots i:nth-child(3){ background:#5BC8F5; }
+</style></head>
+<body>
+  <img class="photo" src="brand/ollierdz-nyc.jpg">
+  <div class="scrim-top"></div>
+  <div class="scrim-bot"></div>
+
+  <div class="title">
+    <div class="l1">Today in</div>
+    <div class="l2"><span class="box">AI</span></div>
+  </div>
+
+  <div class="tag">The latest <b>marketing</b><br>&amp; <b>AI</b> news</div>
+  <div class="foot"><span class="dots"><i></i><i></i><i></i></span> with @orod215</div>
+</body></html>
