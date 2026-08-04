@@ -3,37 +3,34 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   @font-face { font-family:'Anton'; src:url('fonts/Anton-Regular.ttf'); }
-  body { width:2048px; height:1152px; position:relative; overflow:hidden;
+  body { width:2560px; height:1440px; position:relative; overflow:hidden;
     background:#0A0720; font-family:'Anton',Arial,sans-serif; }
 
-  /* photo on the right, face kept inside the safe band */
-  .photo-wrap { position:absolute; top:0; right:0; width:1180px; height:1152px; z-index:1; }
-  .photo { width:100%; height:100%; object-fit:cover; object-position:52% 38%; }
+  /* photo positioned by explicit px so the face lands inside the all-devices strip */
+  .photo { position:absolute; height:1440px; width:auto; left:815px; top:0; z-index:1; }
   .fade { position:absolute; inset:0; z-index:2;
-    background:linear-gradient(90deg, #0A0720 0%, rgba(10,7,32,0.72) 26%, rgba(10,7,32,0) 60%); }
+    background:linear-gradient(90deg, #0A0720 0%, #0A0720 34%, rgba(10,7,32,0.55) 46%, rgba(10,7,32,0) 62%); }
   .fade2 { position:absolute; inset:0; z-index:2;
-    background:linear-gradient(0deg, rgba(10,7,32,0.55) 0%, rgba(10,7,32,0) 28%); }
+    background:linear-gradient(0deg, rgba(10,7,32,0.5) 0%, rgba(10,7,32,0) 24%); }
+  .glow { position:absolute; left:470px; top:430px; width:820px; height:600px; z-index:1;
+    background:radial-gradient(closest-side, rgba(139,92,246,0.32), rgba(139,92,246,0) 70%); }
 
-  /* soft brand glow behind the title */
-  .glow { position:absolute; left:180px; top:300px; width:720px; height:560px; z-index:1;
-    background:radial-gradient(closest-side, rgba(139,92,246,0.34), rgba(139,92,246,0) 70%); }
-
-  /* text lives inside YouTube's always-visible safe band (center 1546x423) */
-  .safe { position:absolute; left:0; right:0; top:365px; height:423px; z-index:5;
+  /* text lives inside the center 1546x423 all-devices safe band */
+  .safe { position:absolute; left:507px; top:508px; width:1546px; height:423px; z-index:5;
     display:flex; align-items:center; }
-  .stack { margin-left:300px; }
+  .stack { padding-left:56px; }
   .title { text-transform:uppercase; line-height:0.9; color:#fff; letter-spacing:1px; }
-  .l1 { font-size:118px; text-shadow:0 6px 26px rgba(0,0,0,0.55); }
-  .l2 { margin-top:8px; }
-  .box { display:inline-block; font-size:140px; color:#fff; line-height:1;
+  .l1 { font-size:132px; text-shadow:0 6px 26px rgba(0,0,0,0.55); }
+  .l2 { margin-top:6px; }
+  .box { display:inline-block; font-size:150px; color:#fff; line-height:1;
     padding:2px 34px 16px; border-radius:20px;
     background:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
     box-shadow:0 12px 40px rgba(233,53,193,0.5); }
-  .tag { margin-top:34px; text-transform:uppercase; letter-spacing:2px;
-    font-size:46px; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,0.6); }
+  .tag { margin-top:28px; text-transform:uppercase; letter-spacing:2px;
+    font-size:48px; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,0.6); }
   .tag b { color:#C9B6FF; }
-  .foot { margin-top:26px; display:flex; align-items:center; gap:16px;
-    text-transform:uppercase; letter-spacing:3px; font-size:30px; color:#e9e4ff; }
+  .foot { margin-top:22px; display:flex; align-items:center; gap:16px;
+    text-transform:uppercase; letter-spacing:3px; font-size:31px; color:#e9e4ff; }
   .dots { display:flex; gap:9px; }
   .dots i { width:16px; height:16px; border-radius:50%; display:block; }
   .dots i:nth-child(1){ background:#8B5CF6; }
@@ -41,11 +38,9 @@
   .dots i:nth-child(3){ background:#5BC8F5; }
 </style></head>
 <body>
-  <div class="photo-wrap">
-    <img class="photo" src="brand/ollierdz-nyc-teeth.jpg">
-    <div class="fade"></div>
-    <div class="fade2"></div>
-  </div>
+  <img class="photo" src="brand/ollierdz-nyc-teeth.jpg">
+  <div class="fade"></div>
+  <div class="fade2"></div>
   <div class="glow"></div>
 
   <div class="safe">
