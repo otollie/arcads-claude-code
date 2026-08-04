@@ -7,16 +7,44 @@
     font-family:'Anton',Arial,sans-serif;
     background:radial-gradient(circle at 50% 42%, #1b1140 0%, #0A0720 62%); }
 
-  .ring { position:absolute; inset:0; }
+  /* curved "TODAY IN AI" wordmark around the top */
+  .arc { position:absolute; left:0; top:0; width:1024px; height:1024px; z-index:4; }
+  .arc text { font-family:'Anton',sans-serif; fill:#fff; font-size:78px; letter-spacing:4px; }
 
-  .tile { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-    width:600px; height:600px; border-radius:150px;
+  /* center lockup: mic + AI */
+  .lock { position:absolute; left:50%; top:53%; transform:translate(-50%,-50%);
+    display:flex; align-items:center; gap:30px; z-index:3; }
+
+  .mic { display:flex; flex-direction:column; align-items:center; }
+  .mic .head { width:150px; height:250px; border-radius:75px;
     background:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
-    box-shadow:0 26px 80px rgba(233,53,193,0.5), inset 0 4px 0 rgba(255,255,255,0.18);
-    display:flex; align-items:center; justify-content:center; }
-  .tile span { font-size:400px; color:#fff; line-height:1; letter-spacing:2px;
-    padding-bottom:34px; text-shadow:0 8px 30px rgba(0,0,0,0.28); }
+    box-shadow:0 14px 44px rgba(233,53,193,0.45), inset 0 4px 0 rgba(255,255,255,0.2);
+    position:relative; }
+  /* grille lines */
+  .mic .head::before { content:''; position:absolute; left:28px; right:28px; top:34px; bottom:70px;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.55) 0 6px, transparent 6px 20px);
+    border-radius:40px; }
+  .mic .stem { width:22px; height:70px; background:#efeaff; margin-top:-6px; border-radius:4px; }
+  .mic .base { width:150px; height:22px; background:#efeaff; border-radius:12px; margin-top:2px; }
+  .mic .arcline { position:absolute; }
+
+  .ai { font-size:300px; color:#fff; line-height:1; letter-spacing:2px;
+    text-shadow:0 10px 34px rgba(0,0,0,0.35);
+    background:linear-gradient(135deg,#fff 0%, #f0e9ff 100%);
+    -webkit-background-clip:text; background-clip:text; }
 </style></head>
 <body>
-  <div class="tile"><span>AI</span></div>
+  <svg class="arc" viewBox="0 0 1024 1024">
+    <defs><path id="top" d="M 172,512 A 340,340 0 0 1 852,512" fill="none"/></defs>
+    <text text-anchor="middle"><textPath href="#top" startOffset="50%">TODAY IN AI</textPath></text>
+  </svg>
+
+  <div class="lock">
+    <div class="mic">
+      <div class="head"></div>
+      <div class="stem"></div>
+      <div class="base"></div>
+    </div>
+    <div class="ai">AI</div>
+  </div>
 </body></html>
