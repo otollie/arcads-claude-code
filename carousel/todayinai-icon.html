@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  @font-face { font-family:'Anton'; src:url('fonts/Anton-Regular.ttf'); }
+  body { width:1024px; height:1024px; position:relative; overflow:hidden;
+    font-family:'Anton',Arial,sans-serif;
+    background:radial-gradient(circle at 50% 42%, #1b1140 0%, #0A0720 62%); }
+
+  .ring { position:absolute; inset:0; }
+
+  .tile { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:600px; height:600px; border-radius:150px;
+    background:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
+    box-shadow:0 26px 80px rgba(233,53,193,0.5), inset 0 4px 0 rgba(255,255,255,0.18);
+    display:flex; align-items:center; justify-content:center; }
+  .tile span { font-size:400px; color:#fff; line-height:1; letter-spacing:2px;
+    padding-bottom:34px; text-shadow:0 8px 30px rgba(0,0,0,0.28); }
+</style></head>
+<body>
+  <div class="tile"><span>AI</span></div>
+</body></html>
