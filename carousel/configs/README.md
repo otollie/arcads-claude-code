@@ -33,7 +33,11 @@ never a rebuild. Read the relevant config before any build.
    gloss. Every "what it does" claim must answer "so what, don't all AIs do that?"
 6. Show full slide copy as PLAIN TEXT and wait for approval. Never render first.
 7. Run a `skills/copy-editing` pass on approved copy before building slides.
-8. After approval: render, deliver PNGs, then caption + CTA. No hashtags.
+8. BEFORE designing/rendering, read `carousel/design-craft.md` (pro-tier craft:
+   type pairing, color-segmented headlines, cutout+backing+shadow depth, kinetic
+   bg type, 3D mockups, eye-path). Score the slides against its pre-flight
+   checklist. `canvas-philosophy.md` still governs clinical/diagram decks.
+9. After approval: render, deliver PNGs, then caption + CTA. No hashtags.
 
 ## Categories (fixed skeletons; more may be added)
 - **Breakdown** — defines a tool/feature, what it does, how to use it.
