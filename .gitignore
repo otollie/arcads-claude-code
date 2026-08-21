@@ -31,3 +31,5 @@ carousel/*.png
 carousel/extracted/
 carousel/*.zip
 carousel/node_modules/
+
+carousel/node_modules/
