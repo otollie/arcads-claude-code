@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  :root { --bg: #0D1F4E; --ink: #FFFFFF; --muted: #b9c6e2; }
+  .pad { justify-content: center; gap: 38px; align-items: flex-start; }
+  .h { font-size: 76px; }
+  .pill { align-self: flex-start; display: flex; align-items: center; gap: 22px;
+    background: #fff; border-radius: 999px; padding: 30px 54px;
+    box-shadow: 0 24px 80px rgba(41,168,219,0.35); }
+  .pill .bubble { width: 54px; height: 54px; border-radius: 50%; background: var(--grad);
+    display: flex; align-items: center; justify-content: center; color: #fff; font-size: 28px; }
+  .pill .kw { font-family: var(--font-display); font-weight: 700; font-size: 66px; letter-spacing: 0.04em;
+    background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .small { font-size: 27px; color: var(--muted); }
+  .site { position: absolute; bottom: 64px; left: 0; right: 0; text-align: center; z-index: 9;
+    font-family: var(--font-display); font-weight: 700; font-size: 46px; color: #fff; }
+  .site span { color: var(--accent); }
+</style></head>
+<body>
+  <div class="counter" style="color:#fff">7/7</div>
+  <div class="pad">
+    <div class="h">Comment <span class="g" style="-webkit-text-fill-color:#29A8DB;color:#29A8DB">"GOOGLE"</span> and it's yours — free.</div>
+    <div class="pill"><span class="bubble">💬</span><span class="kw">GOOGLE</span></div>
+    <div class="sup" style="color:#dbe5f7">I'll send you the free system that gets your clinic <b style="color:#fff">named in Google's AI answer</b>.</div>
+    <div class="small">Follow so it doesn't get buried.</div>
+  </div>
+  <div class="site">uplift<span>.marketing</span></div>
+</body></html>

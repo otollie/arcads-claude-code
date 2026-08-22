@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="agents-base-v2.css">
+<style>
+  .kicker { position: absolute; top: 110px; left: 76px; }
+  .h { position: absolute; top: 170px; left: 72px; right: 64px; font-size: 78px; }
+
+  .row { position: absolute; left: 64px; right: 64px; display: flex; gap: 28px; }
+  .panel { flex: 1; border-radius: 24px; padding: 38px 34px; }
+  .bot { background: rgba(255,255,255,0.04); border: 1.5px solid var(--line); }
+  .agent { background: linear-gradient(160deg, rgba(139,92,246,0.22), rgba(233,53,193,0.16)); border: 1.5px solid rgba(233,53,193,0.5); box-shadow: 0 30px 70px rgba(139,92,246,0.30); }
+  .icon { width: 86px; height: 86px; border-radius: 22px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+  .icon.b { background: rgba(168,164,217,0.16); }
+  .icon.a { background: linear-gradient(140deg, var(--violet), var(--magenta)); }
+  .label { font-family: 'Archivo Black'; font-size: 40px; letter-spacing: -0.02em; }
+  .agent .label { color: #fff; }
+  .tag { font-size: 23px; font-weight: 700; color: var(--muted); margin-top: 4px; }
+  .agent .tag { color: #F2CCEF; }
+  .li { display: flex; gap: 14px; align-items: flex-start; margin-top: 22px; font-size: 27px; line-height: 1.32; color: #E7E3FF; }
+  .li svg { flex: none; margin-top: 5px; }
+  .li b { font-weight: 800; }
+  .foot { position: absolute; bottom: 96px; left: 64px; right: 64px; font-size: 30px; font-weight: 600; color: var(--muted); line-height: 1.4; text-align: center; }
+  .foot b { color: var(--paper); }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">4/9</div></div>
+
+  <div class="kicker">The difference</div>
+  <div class="h">Chatbot <span class="g">vs.</span> agent.</div>
+
+  <div class="row" style="top: 360px;">
+    <div class="panel bot">
+      <div class="icon b"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#C9C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="label" style="color:#D8D3FF">Chatbot</div>
+      <div class="tag">Talks</div>
+      <div class="li"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9A4D9" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg><span>You ask, it <b>replies with words</b>.</span></div>
+      <div class="li"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9A4D9" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg><span>Then it just waits.</span></div>
+      <div class="li"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9A4D9" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg><span>It can't <b>do</b> anything.</span></div>
+    </div>
+    <div class="panel agent">
+      <div class="icon a"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+      <div class="label">Agent</div>
+      <div class="tag">Takes action</div>
+      <div class="li"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E935C1" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>You give it a <b>goal</b>.</span></div>
+      <div class="li"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E935C1" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>It <b>uses tools</b> & takes steps.</span></div>
+      <div class="li"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E935C1" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>It works until it's <b>done</b>.</span></div>
+    </div>
+  </div>
+
+  <div class="foot">Same Claude. One <b>answers</b>, one <b>gets the job done</b>.</div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

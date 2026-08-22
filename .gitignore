@@ -21,3 +21,15 @@ scripts/generate-thumbnails.sh
 scripts/generate-thumbnails-*.sh
 scripts/generate-ab-variants*.sh
 scripts/regen-*.sh
+
+# Carousel generator artifacts (rendered images, fonts, symlinked deps)
+carousel/node_modules/
+carousel/fonts/
+carousel/*.png
+
+# Raw image extraction scratch (transcript dumps)
+carousel/extracted/
+carousel/*.zip
+carousel/node_modules/
+
+carousel/node_modules/

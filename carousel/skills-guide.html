@@ -1,0 +1,164 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Archivo Black'; src: url('fonts/ArchivoBlack.ttf'); }
+  @font-face { font-family: 'Archivo'; src: url('fonts/ArchivoVar.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'Inter'; src: url('fonts/InterVar.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'Instrument'; src: url('canvas-fonts/InstrumentSerif-Italic.ttf'); }
+  @font-face { font-family: 'PlexMono'; src: url('canvas-fonts/IBMPlexMono-Regular.ttf'); }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg0: #0A0720; --violet: #8B5CF6; --magenta: #E935C1; --cyan: #5BC8F5;
+    --paper: #F4F2FF; --muted: #ABA5DC; --line: rgba(171,165,220,0.22); --card: rgba(255,255,255,0.05);
+  }
+  body { font-family: 'Inter', sans-serif; color: var(--paper); }
+
+  .page {
+    position: relative; width: 210mm; height: 297mm; overflow: hidden;
+    padding: 24mm 20mm; page-break-after: always;
+    background:
+      radial-gradient(420px 300px at 86% 6%, rgba(233,53,193,0.30) 0%, rgba(233,53,193,0) 55%),
+      radial-gradient(460px 360px at 4% 30%, rgba(91,200,245,0.16) 0%, rgba(91,200,245,0) 55%),
+      radial-gradient(600px 460px at 10% 100%, rgba(139,92,246,0.30) 0%, rgba(139,92,246,0) 60%),
+      linear-gradient(158deg, #1B1450 0%, var(--bg0) 74%);
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .pnum { position: absolute; bottom: 12mm; right: 20mm; font-family:'PlexMono',monospace; font-size: 10pt; color: var(--muted); letter-spacing: 0.1em; }
+  .brandfoot { position: absolute; bottom: 12mm; left: 20mm; font-family:'PlexMono',monospace; font-size: 10pt; color: var(--muted); letter-spacing: 0.08em; }
+
+  .kicker { display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo'; font-weight: 800; font-size: 11pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--violet); }
+  .kicker::before { content: ""; width: 26px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--violet), var(--magenta)); }
+
+  h1 { font-family: 'Archivo Black'; line-height: 0.98; letter-spacing: -0.03em; }
+  h2 { font-family: 'Archivo Black'; font-size: 26pt; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .g { background: linear-gradient(100deg, var(--violet) 8%, var(--magenta) 70%, var(--cyan) 120%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .serif { font-family: 'Instrument', serif; font-style: italic; }
+  p { font-size: 13pt; line-height: 1.5; color: #D9D4F2; margin-bottom: 12px; }
+  p b, li b { color: #fff; }
+  .lead { font-size: 14.5pt; color: #E7E3FA; }
+
+  .card { background: var(--card); border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 22px; margin: 14px 0; }
+  pre, code { font-family: 'PlexMono', monospace; }
+  pre { font-size: 10.5pt; line-height: 1.6; color: #D9D4F2; white-space: pre-wrap; }
+  .cy { color: var(--cyan); } .mg { color: var(--magenta); } .mu { color: var(--muted); } .wt { color:#fff; }
+
+  ol, ul { margin: 8px 0 12px 22px; } li { font-size: 13pt; line-height: 1.5; color: #D9D4F2; margin-bottom: 8px; }
+
+  .seal { width: 40px; height: 40px; border-radius: 11px; display:inline-grid; place-items:center; background: linear-gradient(140deg, var(--violet), var(--magenta)); color:#fff; font-family:'Archivo Black'; font-size: 16pt; margin-right: 12px; vertical-align: middle; }
+  .skill { display:flex; gap:14px; align-items:flex-start; }
+  .skill .n { flex:0 0 40px; }
+  .skill .t { font-family:'Archivo Black'; font-size: 16pt; color:#fff; }
+  .skill .d { font-size: 12pt; color: var(--muted); margin-top: 2px; }
+</style></head>
+<body>
+
+<!-- PAGE 1 — COVER -->
+<div class="page" style="display:flex; flex-direction:column; justify-content:center;">
+  <div class="kicker">A free guide · @ollierdz</div>
+  <div class="serif" style="font-size: 30pt; color: var(--muted); margin-top: 22px;">How to get started with</div>
+  <h1 style="font-size: 64pt; margin-top: 4px;">Claude <span class="g">Skills</span></h1>
+  <p class="lead" style="margin-top: 22px; max-width: 150mm;">Teach Claude to do your repeat tasks <b>your way</b> — once. Build your first skill in 5 minutes, then steal three you can use today.</p>
+  <div class="card" style="margin-top: 26px; max-width: 150mm;">
+    <pre><span class="cy">my-skill/</span>
+├─ <span class="wt">SKILL.md</span><span class="mu">      ← the instructions Claude reads</span>
+├─ scripts/<span class="mu">      ← optional code it can run</span>
+└─ assets/<span class="mu">       ← fonts, templates, data</span></pre>
+  </div>
+  <div class="brandfoot">ollierdz · 2026</div>
+  <div class="pnum">01</div>
+</div>
+
+<!-- PAGE 2 — WHAT IS A SKILL -->
+<div class="page">
+  <div class="kicker">The idea</div>
+  <h1 style="font-size: 36pt; margin-top: 14px;">What a skill actually <span class="g">is</span></h1>
+  <p style="margin-top: 16px;">A skill is a <b>folder that teaches Claude a job</b>. At its core is one file — <b>SKILL.md</b> — written mostly in plain English. You can also bundle scripts, templates, fonts, or data the task needs.</p>
+  <p>The magic is <b>progressive disclosure</b>: Claude only sees each skill's name and description until your request actually needs it — then it loads the full instructions and files. That means you can keep dozens of skills without slowing Claude down.</p>
+  <div class="card">
+    <h2 style="font-size:16pt;">Skill vs. a saved prompt</h2>
+    <p style="margin-bottom:0;">A saved prompt is just text you paste. A skill is <b>reusable expertise</b> Claude loads on its own — and it can carry real tools (code, fonts, API flows), not just words.</p>
+  </div>
+  <p class="serif" style="font-size: 19pt; color:#fff; margin-top: 18px;">"Explain it once. Use it forever."</p>
+  <div class="brandfoot">ollierdz · 2026</div>
+  <div class="pnum">02</div>
+</div>
+
+<!-- PAGE 3 — FIRST SKILL IN 5 MIN -->
+<div class="page">
+  <div class="kicker">Do it now</div>
+  <h1 style="font-size: 36pt; margin-top: 14px;">Your first skill in <span class="g">5 minutes</span></h1>
+  <p style="margin-top: 14px;">Create a folder, add one file, and paste this in. The <b>description</b> line is the most important part — it's how Claude decides when to use the skill.</p>
+  <div class="card">
+    <pre><span class="mu">my-skill/SKILL.md</span>
+<span class="mg">---</span>
+<span class="cy">name:</span> linkedin-rewriter
+<span class="cy">description:</span> Rewrites rough notes into a punchy LinkedIn
+  post in my voice. Use when I paste notes and ask for
+  a LinkedIn post.
+<span class="mg">---</span>
+
+<span class="wt"># What this does</span>
+Turn my messy notes into one scroll-stopping post.
+
+<span class="wt">## Rules</span>
+- Hook in the first line. No "I'm excited to announce".
+- Short lines. One idea per line.
+- End with a question to drive comments.</pre>
+  </div>
+  <p><b>That's a working skill.</b> Drop it where Claude can see it (next page), then just say: <span class="serif" style="font-size:14pt;color:#fff;">"here are my notes — make a LinkedIn post."</span></p>
+  <div class="brandfoot">ollierdz · 2026</div>
+  <div class="pnum">03</div>
+</div>
+
+<!-- PAGE 4 — 3 READY-TO-USE SKILLS -->
+<div class="page">
+  <div class="kicker">Steal these</div>
+  <h1 style="font-size: 36pt; margin-top: 14px;">3 skills to use <span class="g">today</span></h1>
+  <p style="margin-top: 12px;">Copy the description into a new SKILL.md, tweak the rules to your brand, done.</p>
+
+  <div class="card skill"><div class="n"><span class="seal">1</span></div><div>
+    <div class="t">carousel-maker</div>
+    <div class="d"><b>Description:</b> Builds an on-brand Instagram carousel (cover + slides) from a topic. Use when I ask for a carousel or slides.</div>
+  </div></div>
+
+  <div class="card skill"><div class="n"><span class="seal">2</span></div><div>
+    <div class="t">thumbnail-maker</div>
+    <div class="d"><b>Description:</b> Generates high-CTR YouTube thumbnail concepts and copy. Use when I mention a thumbnail or video title.</div>
+  </div></div>
+
+  <div class="card skill"><div class="n"><span class="seal">3</span></div><div>
+    <div class="t">content-repurposer</div>
+    <div class="d"><b>Description:</b> Turns one long video or post into 5 short-form hooks across platforms. Use when I paste a transcript or ask to repurpose.</div>
+  </div></div>
+
+  <p style="margin-top: 14px;"><b>Tip:</b> keep each skill narrow. One job, one folder. Narrow skills trigger more reliably than a giant do-everything one.</p>
+  <div class="brandfoot">ollierdz · 2026</div>
+  <div class="pnum">04</div>
+</div>
+
+<!-- PAGE 5 — INSTALL + CTA -->
+<div class="page">
+  <div class="kicker">Ship it</div>
+  <h1 style="font-size: 36pt; margin-top: 14px;">Where to <span class="g">install</span></h1>
+  <div class="card">
+    <h2 style="font-size:16pt;">Claude Code</h2>
+    <p style="margin-bottom:6px;">Put the folder in one of these:</p>
+    <pre><span class="cy">.claude/skills/</span>my-skill/SKILL.md   <span class="mu"># this project</span>
+<span class="cy">~/.claude/skills/</span>my-skill/SKILL.md  <span class="mu"># every project</span></pre>
+    <p style="margin-bottom:0; margin-top:6px;">Claude detects it automatically — no restart, no config.</p>
+  </div>
+  <div class="card">
+    <h2 style="font-size:16pt;">claude.ai</h2>
+    <p style="margin-bottom:0;">Add it under <b>Settings → Capabilities → Skills</b>. Anthropic also ships official skills (canvas-design, pdf, pptx, xlsx) at <b>github.com/anthropics/skills</b> — a great place to learn the format.</p>
+  </div>
+
+  <div class="card" style="border-color: rgba(233,53,193,0.45); background: rgba(233,53,193,0.10); margin-top: 18px;">
+    <div class="serif" style="font-size: 22pt; color:#fff;">Want the full system?</div>
+    <p style="margin: 8px 0 0; font-size: 13.5pt;">Follow <b>@ollierdz</b> for the carousels, prompts, and skills I use to run all of this on autopilot.</p>
+  </div>
+  <div class="brandfoot">ollierdz · 2026</div>
+  <div class="pnum">05</div>
+</div>
+
+</body></html>

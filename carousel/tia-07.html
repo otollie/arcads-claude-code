@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="todayinai-base.css">
+<style>
+  .pad { justify-content:center; align-items:center; text-align:center; }
+  .miclogo { display:flex; align-items:center; gap:26px; margin-bottom:52px; }
+  .miclogo .mic { width:70px; height:118px; border-radius:35px; background:var(--grad);
+    box-shadow:0 12px 36px rgba(233,53,193,0.45), inset 0 3px 0 rgba(255,255,255,0.2); position:relative; }
+  .miclogo .mic::before { content:''; position:absolute; left:14px; right:14px; top:16px; bottom:30px;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.55) 0 4px, transparent 4px 12px);
+    border-radius:20px; }
+  .miclogo .ai { font-family:var(--display); font-size:150px; color:#fff; line-height:1; }
+  .h { font-size:104px; }
+  .sub { font-size:42px; margin-top:34px; }
+  .sub .hand { color:#fff; font-weight:800; }
+</style></head>
+<body>
+  <div class="brand"><span>Today in</span><span class="box">AI</span></div>
+  <div class="counter">7/7</div>
+  <div class="pad">
+    <div class="miclogo"><span class="mic"></span><span class="ai">AI</span></div>
+    <div class="h">That's <span class="g">Today in AI</span></div>
+    <div class="sub">New episode every week.<br>Follow <span class="hand">@orod215</span> for more.</div>
+  </div>
+</body></html>

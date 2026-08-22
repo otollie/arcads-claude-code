@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="agents-base-v2.css">
+<style>
+  .kicker { position: absolute; top: 150px; left: 76px; }
+  .h { position: absolute; top: 232px; left: 72px; right: 64px; font-size: 96px; }
+  .sub { position: absolute; top: 660px; left: 76px; right: 110px; font-size: 34px; font-weight: 500; color: var(--muted); line-height: 1.42; z-index: 5; }
+  .sub b { color: var(--paper); font-weight: 700; }
+
+  .stage { position: absolute; top: 770px; left: 0; right: 0; display: flex; justify-content: center; z-index: 2; }
+  .orbit { position: relative; width: 470px; height: 372px; }
+  .core {
+    position: absolute; left: 50%; top: 52%; transform: translate(-50%,-50%);
+    width: 196px; height: 196px; border-radius: 32px;
+    background: linear-gradient(150deg, var(--violet), var(--magenta));
+    box-shadow: 0 30px 80px rgba(139,92,246,0.55), inset 0 2px 12px rgba(255,255,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+  /* glow ring behind core */
+  .core::before { content:""; position:absolute; inset:-26px; border-radius:44px; background: radial-gradient(circle, rgba(233,53,193,0.4), transparent 70%); filter: blur(20px); z-index:-1; }
+  .node { position: absolute; width: 96px; height: 96px; border-radius: 22px; background: var(--card); border: 1.6px solid var(--line); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+  .n1 { left: 0; top: 8px; } .n2 { right: 0; top: 8px; } .n3 { left: 50%; bottom: 0; transform: translateX(-50%); }
+  .node svg { width: 46px; height: 46px; }
+  .core svg { width: 96px; height: 96px; }
+
+  .swipe { position: absolute; bottom: 110px; right: 70px; z-index: 6; display: flex; align-items: center; gap: 14px; font-family: 'Archivo Black'; font-size: 28px; color: var(--paper); }
+  .swipe svg { width: 56px; height: 32px; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">1/9</div></div>
+
+  <div class="kicker">Explainer</div>
+  <div class="h">What's an AI <span class="g">agent</span>, really?</div>
+
+  <div class="sub">The word everyone throws around but no one explains. Here's what it <b>actually means in Claude</b> 👇</div>
+
+  <div class="stage">
+    <div class="orbit">
+      <svg viewBox="0 0 470 372" style="position:absolute;inset:0;width:100%;height:100%">
+        <g stroke="rgba(171,165,220,0.4)" stroke-width="2.5" fill="none" stroke-dasharray="5 7">
+          <path d="M96 72 L214 194"/><path d="M374 72 L256 194"/><path d="M235 290 L235 236"/>
+        </g>
+      </svg>
+      <div class="node n1"><svg viewBox="0 0 24 24" fill="none" stroke="#C9C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h.01"/><path d="M3 12h.01"/><path d="M3 19h.01"/><path d="M8 5h13"/><path d="M8 12h13"/><path d="M8 19h13"/></svg></div>
+      <div class="node n2"><svg viewBox="0 0 24 24" fill="none" stroke="#C9C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div>
+      <div class="node n3"><svg viewBox="0 0 24 24" fill="none" stroke="#C9C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div>
+      <div class="core">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="swipe">SWIPE
+    <svg viewBox="0 0 60 34"><path d="M2 17 H46 M34 5 L48 17 L34 29" stroke="#E935C1" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

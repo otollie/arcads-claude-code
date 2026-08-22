@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  .pad { gap: 34px; }
+  .compare { display: flex; gap: 26px; margin-top: 16px; }
+  .col { flex: 1; }
+  .col .lbl { font-family: var(--font-display); font-weight: 600; font-size: 22px;
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; color: var(--muted); }
+  .pack { padding: 26px; }
+  .r { display: flex; align-items: center; gap: 14px; padding: 13px 0; border-bottom: 1px solid #e6ecf5; }
+  .r:last-child { border-bottom: none; }
+  .dot { width: 40px; height: 40px; border-radius: 10px; background: #dfe7f2; flex-shrink: 0; }
+  .nm { font-family: var(--font-body); font-weight: 700; font-size: 23px; }
+  .st { font-size: 17px; color: var(--muted); }
+  .old { opacity: 0.55; filter: grayscale(0.4); }
+  .ai { border: 3px solid var(--accent); }
+  .ai .aihead { display: flex; align-items: center; gap: 10px; font-family: var(--font-display);
+    font-weight: 600; font-size: 20px; color: var(--accent-2); margin-bottom: 12px; }
+  .spark { width: 26px; height: 26px; border-radius: 50%; background: var(--grad); }
+  .mystery .nm { color: var(--accent-2); }
+  .q { width: 40px; height: 40px; border-radius: 10px; background: var(--soft); color: var(--accent-2);
+    display: flex; align-items: center; justify-content: center; font-family: var(--font-display);
+    font-weight: 700; font-size: 26px; flex-shrink: 0; }
+</style></head>
+<body>
+  <div class="counter">2/7</div>
+  <div class="pad">
+    <div class="kick">what changed</div>
+    <div class="h">Three map spots just became <span class="g">one or two</span>.</div>
+    <div class="sup">Google's AI answers the search itself — and only names its favorites.</div>
+    <div class="compare">
+      <div class="col">
+        <div class="lbl">Before</div>
+        <div class="card pack old">
+          <div class="r"><span class="dot"></span><div><div class="nm">Riverside PT</div><div class="st">★★★★★ · map pack</div></div></div>
+          <div class="r"><span class="dot"></span><div><div class="nm">Motion Health</div><div class="st">★★★★★ · map pack</div></div></div>
+          <div class="r"><span class="dot"></span><div><div class="nm">Core Physio</div><div class="st">★★★★★ · map pack</div></div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="lbl">Now</div>
+        <div class="card pack ai">
+          <div class="aihead"><span class="spark"></span> AI answer</div>
+          <div class="r"><span class="dot"></span><div><div class="nm">Riverside PT</div><div class="st stars">★★★★★ <span style="color:#4a5878">(214 reviews)</span></div></div></div>
+          <div class="r mystery"><span class="q">?</span><div><div class="nm">your clinic?</div><div class="st">named — or invisible</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swipe">→</div>
+  <div style="position:absolute;bottom:64px;left:90px;z-index:9;font-family:var(--font-display);font-weight:600;font-size:26px;color:var(--accent-2);opacity:0.75">uplift.marketing</div>
+</body></html>

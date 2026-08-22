@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="skills-base.css">
+<style>
+  .flow { margin-top: auto; display: flex; flex-direction: column; gap: 18px; }
+  .step { display: flex; align-items: center; gap: 22px; }
+  .step .dot { font-family:'Archivo Black'; font-size: 24px; width: 52px; height: 52px; flex:0 0 52px; border-radius: 14px; display:grid; place-items:center; background: rgba(139,92,246,0.18); border: 1.5px solid var(--line); color: var(--cyan); }
+  .step .st { font-size: 30px; color: #E7E3FA; }
+  .step .st b { color: #fff; }
+  .conn { width: 52px; text-align: center; color: var(--magenta); font-size: 30px; line-height: 0.4; }
+</style></head>
+<body>
+  <div class="topbar"><span class="seg">@ollierdz</span><span class="seg mid">How it works</span><span class="counter">3/6</span><div class="rule"></div></div>
+
+  <div class="content">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div class="seal"><svg viewBox="0 0 86 86"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#E935C1"/></linearGradient></defs><circle cx="43" cy="43" r="40" fill="url(#sg)"/><circle cx="43" cy="43" r="40" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-dasharray="2 7"/></svg><span>02</span></div>
+      <div class="kicker" style="color: var(--muted);">How it works</div>
+    </div>
+
+    <div class="h" style="font-size: 80px; margin-top: 34px; max-width: 940px;">Claude loads it <span class="g">only when</span> it needs it.</div>
+    <div class="body" style="margin-top: 30px; max-width: 900px;">The name and description stay visible. The full instructions and files load <b>on demand</b> — so you can keep dozens of skills without clogging the context.</div>
+
+    <div class="flow">
+      <div class="step"><div class="dot">1</div><div class="st">You make <b>a request</b></div></div>
+      <div class="conn">↓</div>
+      <div class="step"><div class="dot">2</div><div class="st">Claude <b>matches the skill</b></div></div>
+      <div class="conn">↓</div>
+      <div class="step"><div class="dot">3</div><div class="st">Loads <b>instructions + tools</b></div></div>
+      <div class="conn">↓</div>
+      <div class="step"><div class="dot">4</div><div class="st">Does the job <b>your way</b></div></div>
+    </div>
+  </div>
+  <div class="wm">ollierdz · 2026</div>
+</body></html>

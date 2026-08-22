@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @font-face{font-family:'Inter';src:url('fonts/InterVar.ttf');font-weight:100 900;}
+  body{width:1120px;height:660px;background:transparent;font-family:'Inter',Arial,sans-serif;}
+  .card{width:1120px;height:660px;background:#fff;border:1px solid #ececf2;border-radius:28px;
+    padding:44px 48px;position:relative;}
+  .title{font-size:40px;font-weight:700;color:#14142B;letter-spacing:-0.01em;}
+  svg{position:absolute;left:24px;top:104px;}
+  .yl{font-size:22px;fill:#9a9ab0;font-family:'Inter';}
+  .xl{font-size:22px;fill:#9a9ab0;font-family:'Inter';}
+  .grid{stroke:#f0f0f4;stroke-width:2;}
+  .line{fill:none;stroke:#4F46E5;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}
+  .dot{fill:#4F46E5;}
+  .peak{font-size:30px;font-weight:800;fill:#14142B;font-family:'Inter';}
+  .foot{position:absolute;left:48px;bottom:34px;font-size:26px;color:#9a9ab0;}
+</style></head>
+<body>
+  <div class="card">
+    <div class="title">Your graph</div>
+    <svg width="1080" height="470" viewBox="0 0 1080 470">
+      <!-- gridlines + y labels: 60,70,80,90,100 -->
+      <g>
+        <line class="grid" x1="130" y1="430" x2="1000" y2="430"/>
+        <line class="grid" x1="130" y1="345" x2="1000" y2="345"/>
+        <line class="grid" x1="130" y1="260" x2="1000" y2="260"/>
+        <line class="grid" x1="130" y1="175" x2="1000" y2="175"/>
+        <line class="grid" x1="130" y1="90" x2="1000" y2="90"/>
+        <text class="yl" x="86" y="438" text-anchor="end">60</text>
+        <text class="yl" x="86" y="353" text-anchor="end">70</text>
+        <text class="yl" x="86" y="268" text-anchor="end">80</text>
+        <text class="yl" x="86" y="183" text-anchor="end">90</text>
+        <text class="yl" x="86" y="98" text-anchor="end">100</text>
+      </g>
+      <!-- data line -->
+      <polyline class="line" points="140,396 254,336 369,362 483,260 597,294 711,192 826,226 940,132"/>
+      <!-- dots -->
+      <circle class="dot" cx="140" cy="396" r="9"/>
+      <circle class="dot" cx="254" cy="336" r="9"/>
+      <circle class="dot" cx="369" cy="362" r="9"/>
+      <circle class="dot" cx="483" cy="260" r="9"/>
+      <circle class="dot" cx="597" cy="294" r="9"/>
+      <circle class="dot" cx="711" cy="192" r="9"/>
+      <circle class="dot" cx="826" cy="226" r="9"/>
+      <circle class="dot" cx="940" cy="132" r="9"/>
+      <text class="peak" x="940" y="104" text-anchor="middle">95</text>
+      <!-- x labels -->
+      <text class="xl" x="140" y="464" text-anchor="middle">6.25.26</text>
+      <text class="xl" x="254" y="464" text-anchor="middle">7.2.26</text>
+      <text class="xl" x="369" y="464" text-anchor="middle">7.9.26</text>
+      <text class="xl" x="483" y="464" text-anchor="middle">7.16.26</text>
+      <text class="xl" x="597" y="464" text-anchor="middle">7.23.26</text>
+      <text class="xl" x="711" y="464" text-anchor="middle">7.30.26</text>
+      <text class="xl" x="826" y="464" text-anchor="middle">8.6.26</text>
+      <text class="xl" x="940" y="464" text-anchor="middle">8.13.26</text>
+    </svg>
+    <div class="foot">Sample numbers — yours appear as you enter weeks.</div>
+  </div>
+</body></html>

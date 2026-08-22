@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="github-base.css">
+<style>
+  .split { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+  .panel { padding: 24px 26px; }
+  .panel .pt { font-family:'Archivo',sans-serif; font-weight: 800; font-size: 28px; color: #fff; }
+  .panel .pd { font-size: 20px; color: var(--muted); margin-top: 8px; line-height: 1.38; }
+  .prtitle { display:flex; align-items:center; gap:12px; margin-bottom: 14px; }
+  .prtitle .open { font-size: 16px; color:#fff; background: var(--green-btn); border-radius:999px; padding: 4px 12px; display:flex; align-items:center; gap:6px;}
+  .prtitle .t { font-size: 19px; color: var(--fg); }
+</style></head>
+<body>
+  <div class="topbar">
+    <div class="brandmark"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="hl">@ollierdz</span></div>
+    <span class="eyebrow-top">Building block · 3</span>
+    <span class="counter">7/9</span>
+    <div class="rule"></div>
+  </div>
+
+  <div class="content">
+    <div class="kicker"><span class="sq"></span> Work without chaos</div>
+    <div class="h" style="font-size: 60px; margin-top: 24px;">Branches <span style="color:var(--muted);">&amp;</span> <span class="gr">Pull Requests</span></div>
+    <div class="lead" style="margin-top: 20px; max-width: 900px;">Make a <b>branch</b> — a safe copy — to try changes without breaking the live version. Happy with it? Open a <b>pull request</b> to review and merge it back.</div>
+
+    <div class="split">
+      <div class="panel card">
+        <div class="pt">Branch</div>
+        <div class="pd">A parallel copy to experiment on.</div>
+        <svg viewBox="0 0 320 150" style="width:100%; margin-top:14px;">
+          <line x1="20" y1="110" x2="300" y2="110" stroke="#2EA043" stroke-width="4"/>
+          <path d="M70 110 C 110 110 110 50 150 50 L 230 50 C 270 50 270 110 300 110" fill="none" stroke="#58A6FF" stroke-width="4"/>
+          <circle cx="20" cy="110" r="9" fill="#2EA043"/><circle cx="70" cy="110" r="9" fill="#2EA043"/><circle cx="300" cy="110" r="9" fill="#2EA043"/>
+          <circle cx="150" cy="50" r="9" fill="#58A6FF"/><circle cx="230" cy="50" r="9" fill="#58A6FF"/>
+          <text x="20" y="138" fill="#8B949E" font-family="monospace" font-size="15">main</text>
+          <text x="150" y="36" fill="#58A6FF" font-family="monospace" font-size="15">feature</text>
+        </svg>
+      </div>
+      <div class="panel card">
+        <div class="prtitle"><span class="open">● Open</span><span class="t">Pull request #42</span></div>
+        <div class="diff">
+          <span class="ctx">  &lt;h1&gt;Welcome&lt;/h1&gt;</span>
+          <span class="del">- &lt;p&gt;Old tagline&lt;/p&gt;</span>
+          <span class="add">+ &lt;p&gt;Build together&lt;/p&gt;</span>
+          <span class="add">+ &lt;button&gt;Get started&lt;/button&gt;</span>
+        </div>
+        <div class="pd" style="margin-top:14px;">Review the green/red changes, then <b style="color:var(--green-br)">Merge</b>.</div>
+      </div>
+    </div>
+  </div>
+  <div class="wm">ollierdz · 2026</div>
+</body></html>

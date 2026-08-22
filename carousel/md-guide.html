@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family:'Archivo'; src:url('fonts/ArchivoVar.ttf'); font-weight:100 900; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterVar.ttf'); font-weight:100 900; }
+  @font-face { font-family:'PlexMono'; src:url('canvas-fonts/IBMPlexMono-Regular.ttf'); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --canvas:#0D1117; --subtle:#161B22; --elev:#1C2128; --border:#30363D; --fg:#E6EDF3; --muted:#8B949E; --dim:#6E7681; --blue:#58A6FF; --blue-br:#79C0FF; --cyan:#56D4DD; --green:#3FB950; }
+  body { font-family:'Inter',sans-serif; color:var(--fg); }
+  .page { position:relative; width:210mm; height:297mm; overflow:hidden; padding:22mm 19mm; page-break-after:always;
+    background: radial-gradient(420px 280px at 86% 4%, rgba(88,166,255,0.16), transparent 60%), var(--canvas); }
+  .page:last-child { page-break-after:auto; }
+  .pnum { position:absolute; bottom:11mm; right:19mm; font-family:'PlexMono',monospace; font-size:10pt; color:var(--dim); letter-spacing:0.1em; }
+  .foot { position:absolute; bottom:11mm; left:19mm; font-family:'PlexMono',monospace; font-size:10pt; color:var(--dim); }
+  .kicker { display:inline-flex; align-items:center; gap:10px; font-family:'PlexMono',monospace; font-weight:600; font-size:11pt; letter-spacing:0.14em; text-transform:uppercase; color:var(--blue-br); }
+  .kicker::before { content:""; width:26px; height:3px; border-radius:2px; background:linear-gradient(90deg,var(--blue),var(--cyan)); }
+  h1 { font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-0.03em; line-height:1.0; }
+  h2 { font-family:'Archivo',sans-serif; font-weight:800; font-size:15pt; }
+  .gr { background:linear-gradient(100deg,var(--blue),var(--cyan) 80%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  p { font-size:12.5pt; line-height:1.5; color:#C9D1D9; margin-bottom:10px; } p b{color:#fff}
+  .lead { font-size:14pt; color:#E7E3FA; }
+  .card { background:var(--subtle); border:1px solid var(--border); border-radius:12px; padding:14px 18px; margin:11px 0; }
+  pre,code { font-family:'PlexMono',monospace; } pre{ font-size:10.5pt; line-height:1.65; color:#C9D1D9; white-space:pre-wrap; }
+  .bl{color:var(--blue-br)} .cy{color:var(--cyan)} .mu{color:var(--muted)} .wt{color:#fff}
+  .mk { width:40px; height:25px; vertical-align:middle; }
+  /* cheat table */
+  table { width:100%; border-collapse:collapse; margin-top:6px; }
+  td { border-bottom:1px solid var(--border); padding:9px 6px; vertical-align:middle; font-size:11.5pt; }
+  td.l { font-family:'PlexMono',monospace; color:#C9D1D9; width:52%; } td.l .s{color:var(--blue-br)}
+  td.r .b{font-weight:800;color:#fff} td.r .i{font-style:italic} td.r code{background:var(--elev);border:1px solid var(--border);border-radius:5px;padding:1px 7px;color:var(--cyan);font-size:10pt} td.r a{color:var(--blue-br);text-decoration:underline}
+</style></head>
+<body>
+
+<!-- COVER -->
+<div class="page" style="display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Free guide · @ollierdz</div>
+  <div style="margin-top:20px;"><svg class="mk" style="width:64px;height:40px;" viewBox="0 0 208 128"><rect x="5" y="5" width="198" height="118" rx="12" fill="none" stroke="#E6EDF3" stroke-width="12"/><path fill="#E6EDF3" d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39zm125 0l-30-33h20V30h20v35h20z"/></svg></div>
+  <h1 style="font-size:56pt;margin-top:18px;">Markdown<br><span class="gr">Quick-Start</span></h1>
+  <p class="lead" style="margin-top:20px;max-width:150mm;">Write formatted text in seconds — and use it everywhere. Set up an editor, learn the 9 symbols that matter, done.</p>
+  <div class="card" style="max-width:150mm;"><pre><span class="mu"># your first file</span>
+<span class="bl">#</span> Hello world
+This is <span class="bl">**</span>markdown<span class="bl">**</span> — and it just works.</pre></div>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">01</div>
+</div>
+
+<!-- STEP 1: first file -->
+<div class="page">
+  <div class="kicker">Step 1</div>
+  <h1 style="font-size:30pt;margin-top:12px;">Make your first <span class="gr">.md file</span></h1>
+  <p style="margin-top:14px;">You don't install Markdown — it's just text. You only need somewhere to type it.</p>
+  <div class="card">
+    <p style="margin-bottom:6px;"><b>The 30-second version:</b></p>
+    <p style="margin-bottom:6px;">1. Open any text editor (even Notepad / TextEdit).</p>
+    <p style="margin-bottom:6px;">2. Type a line: <code class="bl">&nbsp;# My notes&nbsp;</code></p>
+    <p style="margin-bottom:0;">3. Save the file as <code class="cy">&nbsp;notes.md&nbsp;</code> (not <code>.txt</code>).</p>
+  </div>
+  <p>That <b>.md</b> ending tells other apps "read this as Markdown." On its own it's still plain text — the magic shows when an app <b>previews</b> it (next step).</p>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">02</div>
+</div>
+
+<!-- STEP 2: install an editor -->
+<div class="page">
+  <div class="kicker">Step 2 · the setup</div>
+  <h1 style="font-size:30pt;margin-top:12px;">Install a proper <span class="gr">editor</span></h1>
+  <p style="margin-top:14px;">To <b>see</b> your Markdown render live, use one of these free apps. Pick one:</p>
+  <div class="card"><h2 style="font-size:14pt;color:#fff;">✍️ Obsidian <span class="mu" style="font-weight:400;">— best for notes</span></h2><p style="margin:6px 0 0;">Download at <code class="bl">obsidian.md</code>. Type Markdown, see it formatted instantly. Free.</p></div>
+  <div class="card"><h2 style="font-size:14pt;color:#fff;">💻 VS Code <span class="mu" style="font-weight:400;">— best for projects</span></h2><p style="margin:6px 0 0;">Get it at <code class="bl">code.visualstudio.com</code>. Open any <code>.md</code> and press <b>Ctrl/Cmd + Shift + V</b> for a live preview.</p></div>
+  <div class="card"><h2 style="font-size:14pt;color:#fff;">🌐 Nothing to install <span class="mu" style="font-weight:400;">— quickest</span></h2><p style="margin:6px 0 0;">Paste Markdown straight into <b>GitHub</b>, <b>Notion</b>, or <b>Claude</b> — they all render it automatically.</p></div>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">03</div>
+</div>
+
+<!-- STEP 3: cheat sheet -->
+<div class="page">
+  <div class="kicker">Step 3 · the cheat sheet</div>
+  <h1 style="font-size:30pt;margin-top:12px;">The 9 symbols that <span class="gr">matter</span></h1>
+  <table>
+    <tr><td class="l"><span class="s">#</span> Big title &nbsp;·&nbsp; <span class="s">##</span> Smaller</td><td class="r"><span class="b" style="font-size:15pt">Big title</span></td></tr>
+    <tr><td class="l"><span class="s">**</span>bold<span class="s">**</span></td><td class="r"><span class="b">bold</span></td></tr>
+    <tr><td class="l"><span class="s">*</span>italic<span class="s">*</span></td><td class="r"><span class="i">italic</span></td></tr>
+    <tr><td class="l"><span class="s">-</span> bullet item</td><td class="r">• bullet item</td></tr>
+    <tr><td class="l"><span class="s">1.</span> numbered item</td><td class="r">1. numbered item</td></tr>
+    <tr><td class="l"><span class="s">[</span>text<span class="s">](https://url)</span></td><td class="r"><a>text</a></td></tr>
+    <tr><td class="l"><span class="s">`</span>code<span class="s">`</span></td><td class="r"><code>code</code></td></tr>
+    <tr><td class="l"><span class="s">&gt;</span> quote</td><td class="r" style="border-left:3px solid var(--border);padding-left:10px;color:var(--muted)">quote</td></tr>
+    <tr><td class="l"><span class="s">- [ ]</span> task &nbsp;·&nbsp; <span class="s">- [x]</span> done</td><td class="r">☐ task &nbsp; ☑ done</td></tr>
+  </table>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">04</div>
+</div>
+
+<!-- STEP 4: where + CTA -->
+<div class="page">
+  <div class="kicker">Step 4 · put it to work</div>
+  <h1 style="font-size:30pt;margin-top:12px;">Where to <span class="gr">use it</span></h1>
+  <div class="card"><p style="margin-bottom:0;"><b>README.md</b> — the front page of any GitHub repo. First thing people read.</p></div>
+  <div class="card"><p style="margin-bottom:0;"><b>SKILL.md</b> — how you teach Claude a new skill.</p></div>
+  <div class="card"><p style="margin-bottom:0;"><b>Notes</b> — Obsidian &amp; Notion are built on Markdown.</p></div>
+  <div class="card"><p style="margin-bottom:0;"><b>AI prompts</b> — structure your prompts with headings &amp; lists; models love it.</p></div>
+  <div class="card" style="border-color:rgba(88,166,255,0.5);background:rgba(88,166,255,0.10);margin-top:16px;">
+    <h2 style="font-size:15pt;">Want more like this?</h2>
+    <p style="margin:8px 0 0;">Follow <b>@ollierdz</b> for plain-English guides on the tools behind building with AI.</p>
+  </div>
+  <div class="foot">ollierdz · 2026</div><div class="pnum">05</div>
+</div>
+
+</body></html>

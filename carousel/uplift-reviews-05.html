@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  .pad { gap: 36px; }
+  .split { display: flex; gap: 40px; align-items: center; margin-top: 10px; }
+  .list { flex: 1.35; display: flex; flex-direction: column; gap: 22px; }
+  .item { display: flex; gap: 18px; align-items: flex-start; }
+  .ck { width: 44px; height: 44px; border-radius: 12px; background: var(--grad); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 26px; flex-shrink: 0; }
+  .it { font-family: var(--font-body); font-weight: 700; font-size: 31px; line-height: 1.3; padding-top: 4px; }
+  .it small { display: block; font-weight: 500; font-size: 24px; color: var(--muted); margin-top: 4px; }
+  .pdf { flex: 1; }
+  .pdfmock { background: var(--grad); border-radius: 20px; padding: 44px 34px; color: #fff;
+    box-shadow: 0 24px 70px rgba(31,111,196,0.35); transform: rotate(3deg); }
+  .pdfmock .free { font-family: var(--font-display); font-size: 20px; letter-spacing: 0.18em;
+    text-transform: uppercase; opacity: 0.85; margin-bottom: 16px; }
+  .pdfmock .ttl { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.2; }
+  .pdfmock .pg { margin-top: 26px; height: 10px; background: rgba(255,255,255,0.4); border-radius: 5px; }
+  .pdfmock .pg.s { width: 70%; margin-top: 10px; }
+</style></head>
+<body>
+  <div class="counter">5/7</div>
+  <div class="pad">
+    <div class="kick">inside the free guide</div>
+    <div class="h">The whole <span class="g">system</span>, ready to run</div>
+    <div class="split">
+      <div class="list">
+        <div class="item"><span class="ck">✓</span><div class="it">The exact ask script<small>word for word, zero awkward</small></div></div>
+        <div class="item"><span class="ck">✓</span><div class="it">The one moment patients say yes</div></div>
+        <div class="item"><span class="ck">✓</span><div class="it">One tap from their phone</div></div>
+        <div class="item"><span class="ck">✓</span><div class="it">What to do when a bad review lands</div></div>
+      </div>
+      <div class="pdf"><div class="pdfmock">
+        <div class="free">Free guide</div>
+        <div class="ttl">The 5-Star Google Review System</div>
+        <div class="pg"></div><div class="pg s"></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="swipe">→</div>
+  <div style="position:absolute;bottom:64px;left:90px;z-index:9;font-family:var(--font-display);font-weight:600;font-size:26px;color:var(--accent-2);opacity:0.75">uplift.marketing</div>
+</body></html>

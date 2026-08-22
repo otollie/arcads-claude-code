@@ -1,0 +1,64 @@
+/* ============================================================
+   Today In AI — portrait carousel base (1080x1350, IG/FB feed).
+   Dark brand system. Theme vars overridable per slide.
+   Render with --size=1080x1350.
+   ============================================================ */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@font-face { font-family:'Anton';  src:url('fonts/Anton-Regular.ttf'); }
+@font-face { font-family:'Inter';  src:url('fonts/InterVar.ttf'); font-weight:100 900; }
+@font-face { font-family:'Instrument'; src:url('canvas-fonts/InstrumentSerif-Italic.ttf'); font-style:italic; }
+
+:root {
+  --bg:#0A0720; --ink:#FFFFFF; --muted:#a99fd0;
+  --violet:#8B5CF6; --magenta:#E935C1; --cyan:#5BC8F5;
+  --grad:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
+  --card:#171233;
+  --display:'Anton',Arial,sans-serif;
+  --serif:'Instrument',Georgia,serif;
+  --body:'Inter',Arial,sans-serif;
+}
+
+body { width:1080px; height:1350px; position:relative; overflow:hidden;
+  background:radial-gradient(circle at 50% 34%, #1a1140 0%, #0A0720 62%);
+  font-family:var(--body); color:var(--ink); }
+
+/* wrapper chrome */
+.brand { position:absolute; top:60px; left:72px; z-index:9;
+  display:flex; align-items:center; gap:14px;
+  font-family:var(--display); text-transform:uppercase; letter-spacing:1px;
+  font-size:30px; color:#fff; }
+.brand .box { font-size:34px; color:#fff; line-height:1; padding:2px 14px 8px;
+  border-radius:10px; background:var(--grad);
+  box-shadow:0 6px 20px rgba(233,53,193,0.45); }
+.counter { position:absolute; top:66px; right:72px; z-index:9;
+  font-family:var(--display); font-size:28px; letter-spacing:1px; color:#fff; opacity:0.5; }
+.swipe { position:absolute; bottom:70px; right:72px; z-index:9;
+  font-family:var(--display); text-transform:uppercase; letter-spacing:2px;
+  font-size:30px; color:var(--cyan); }
+
+/* giant kinetic number behind story content (depth) */
+.bignum { position:absolute; right:-30px; bottom:-120px; z-index:1;
+  font-family:var(--display); font-size:820px; line-height:0.8; color:#fff; opacity:0.05; }
+
+/* content column */
+.pad { position:absolute; left:72px; right:72px; top:170px; bottom:180px; z-index:5;
+  display:flex; flex-direction:column; }
+
+/* copy primitives */
+.kick { align-self:flex-start; font-family:var(--display); text-transform:uppercase;
+  letter-spacing:3px; font-size:28px; color:#fff;
+  background:rgba(139,92,246,0.18); border:2px solid rgba(139,92,246,0.5);
+  padding:12px 26px; border-radius:999px; }
+.h { font-family:var(--display); text-transform:uppercase; line-height:0.92;
+  letter-spacing:0.5px; color:#fff; }
+.h .g { background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.h .i { font-family:var(--serif); font-style:italic; text-transform:none; letter-spacing:0;
+  color:var(--cyan); font-weight:400; }
+.sub { font-family:var(--body); font-weight:500; line-height:1.45; color:var(--muted); }
+.sub b { color:#fff; font-weight:700; }
+
+/* emoji tile badge */
+.badge { width:112px; height:112px; border-radius:26px; background:var(--grad);
+  display:flex; align-items:center; justify-content:center; font-size:60px;
+  box-shadow:0 16px 44px rgba(139,92,246,0.4), inset 0 3px 0 rgba(255,255,255,0.18); }

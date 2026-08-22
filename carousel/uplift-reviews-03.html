@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  .pad { gap: 34px; }
+  .anat { margin-top: 12px; position: relative; }
+  .rescard { padding: 34px 38px; width: 64%; }
+  .nm { font-family: var(--font-body); font-weight: 800; font-size: 30px; margin-bottom: 8px; }
+  .meta { font-size: 24px; color: var(--muted); }
+  .meta .stars { font-size: 24px; }
+  .chip { display: inline-block; margin-top: 14px; background: var(--soft); color: var(--accent-2);
+    font-weight: 700; font-size: 20px; border-radius: 999px; padding: 8px 18px; }
+  .call { position: absolute; left: 62%; font-family: var(--font-display); font-weight: 600; font-size: 26px;
+    color: var(--accent-2); display: flex; align-items: center; gap: 14px; }
+  .call .ln { width: 90px; height: 3px; background: var(--accent); }
+  .c1 { top: 30px; }
+  .c2 { top: 104px; }
+  .c3 { top: 178px; }
+  .fails { display: flex; gap: 22px; margin-top: 30px; }
+  .fail { font-size: 24px; color: var(--muted); text-decoration: line-through; }
+</style></head>
+<body>
+  <div class="counter">3/7</div>
+  <div class="pad">
+    <div class="kick">how it picks</div>
+    <div class="h">The AI picks by your <span class="g">reviews</span>.</div>
+    <div class="sup">Count, stars, and how recent. Most practices have <b>no system</b> for any of it.</div>
+    <div class="anat">
+      <div class="card rescard">
+        <div class="nm">Riverside Physical Therapy</div>
+        <div class="meta"><span class="stars">★★★★★</span> 4.9 · 214 reviews</div>
+        <div class="chip">newest: 2 days ago</div>
+      </div>
+      <div class="call c1"><span class="ln"></span> stars</div>
+      <div class="call c2"><span class="ln"></span> count</div>
+      <div class="call c3"><span class="ln"></span> recency</div>
+    </div>
+    <div class="fails"><span class="fail">ask at checkout</span><span class="fail">send link later</span><span class="fail">mention next visit</span></div>
+  </div>
+  <div class="swipe">→</div>
+  <div style="position:absolute;bottom:64px;left:90px;z-index:9;font-family:var(--font-display);font-weight:600;font-size:26px;color:var(--accent-2);opacity:0.75">uplift.marketing</div>
+</body></html>

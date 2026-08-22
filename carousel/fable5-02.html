@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .ladder { position: absolute; top: 620px; left: 76px; right: 76px; }
+  .rung {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #fff; border-radius: 16px;
+    padding: 24px 36px; margin-bottom: 20px;
+    box-shadow: 0 12px 28px rgba(17,17,17,0.10);
+  }
+  .rung .name { font-family: 'Archivo Black'; font-size: 36px; letter-spacing: -0.02em; }
+  .rung .role { font-size: 23px; font-weight: 600; color: #888; }
+  .rung.top {
+    background: var(--ink); color: #fff;
+    padding: 36px;
+    box-shadow: 0 24px 50px rgba(17,17,17,0.30);
+    border: 4px solid var(--terra);
+  }
+  .rung.top .name { font-size: 52px; color: var(--terra); }
+  .rung.top .role { color: #ddd; }
+  .new-badge {
+    background: var(--terra); color: #fff; font-weight: 800; font-size: 20px;
+    letter-spacing: 0.08em; padding: 6px 16px; border-radius: 6px;
+    display: inline-block; margin-left: 18px; vertical-align: middle;
+  }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">2/5</div></div>
+
+  <div class="kicker terra">WHAT IS IT?</div>
+  <div class="headline" style="font-size:94px;">A whole <span class="accent">new tier</span> at the top.</div>
+
+  <div class="body-copy" style="top:472px;">
+    Fable 5 doesn't replace Opus — it sits <b>above it</b>. Built for the hardest, most autonomous work.
+  </div>
+
+  <div class="ladder">
+    <div class="rung top">
+      <div><span class="name">FABLE 5</span><span class="new-badge">NEW</span></div>
+      <div class="role">The new frontier</div>
+    </div>
+    <div class="rung"><div class="name">Opus</div><div class="role">Heavy lifting</div></div>
+    <div class="rung"><div class="name">Sonnet</div><div class="role">Speed + smarts</div></div>
+    <div class="rung"><div class="name">Haiku</div><div class="role">Fast + cheap</div></div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

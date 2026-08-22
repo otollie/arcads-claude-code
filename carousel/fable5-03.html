@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .grid {
+    position: absolute; top: 470px; left: 76px; right: 76px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  }
+  .spec {
+    background: #fff; border-radius: 18px; padding: 36px 32px;
+    box-shadow: 0 16px 36px rgba(17,17,17,0.12);
+    min-height: 330px;
+  }
+  .spec.dark { background: var(--ink); }
+  .spec.dark .big { color: var(--terra); }
+  .spec.dark p { color: #bbb; }
+  .spec .label {
+    display: inline-block; background: var(--terra); color: #fff;
+    font-weight: 800; font-size: 17px; letter-spacing: 0.08em;
+    padding: 5px 14px; border-radius: 6px; margin-bottom: 22px;
+  }
+  .spec .big {
+    font-family: 'Archivo Black'; font-size: 62px; letter-spacing: -0.03em;
+    line-height: 0.95; margin-bottom: 18px;
+  }
+  .spec p { font-size: 22px; line-height: 1.45; color: #555; font-weight: 500; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">3/5</div></div>
+
+  <div class="kicker terra">THE FEATURES</div>
+  <div class="headline" style="font-size:100px;">Built <span class="accent">different.</span></div>
+
+  <div class="grid">
+    <div class="spec dark">
+      <div class="label">CONTEXT</div>
+      <div class="big">1M<br>tokens</div>
+      <p>Feed it entire codebases, books, or months of chat history — in one prompt.</p>
+    </div>
+    <div class="spec">
+      <div class="label">OUTPUT</div>
+      <div class="big">128K<br>out</div>
+      <p>Massive single-shot outputs. Whole reports, full refactors, complete decks.</p>
+    </div>
+    <div class="spec">
+      <div class="label">THINKING</div>
+      <div class="big">Adaptive</div>
+      <p>It decides how hard to think per task — you just set the effort dial: low → max.</p>
+    </div>
+    <div class="spec dark">
+      <div class="label">AGENTIC</div>
+      <div class="big">Runs for hours</div>
+      <p>State-of-the-art long-horizon work. Give it a goal, come back to it done.</p>
+    </div>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

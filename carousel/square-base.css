@@ -1,0 +1,76 @@
+/* ============================================================
+   Square carousel base (IG/FB feed, 1080x1080) — ONE shared,
+   themeable stylesheet. Theme = CSS vars overridden per deck.
+   Do NOT fork per deck. Render with --size=1080x1080.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face { font-family: 'Sora';   src: url('fonts/Sora[wght].ttf');   font-weight: 100 800; }
+@font-face { font-family: 'Mulish'; src: url('fonts/Mulish[wght].ttf'); font-weight: 200 900; }
+
+:root {
+  --bg: #FFFFFF;
+  --ink: #0D1F4E;
+  --muted: #4a5878;
+  --accent: #29A8DB;
+  --accent-2: #1F6FC4;
+  --soft: #EAF3FB;
+  --grad: linear-gradient(135deg, #29A8DB, #1F6FC4);
+  --font-display: 'Sora', Arial, sans-serif;
+  --font-body: 'Mulish', Arial, sans-serif;
+}
+
+body {
+  width: 1080px; height: 1080px;
+  overflow: hidden; position: relative;
+  background: var(--bg);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.pad { position: absolute; inset: 90px; display: flex; flex-direction: column; z-index: 5; }
+
+/* counter + swipe cue */
+.counter {
+  position: absolute; top: 64px; right: 90px; z-index: 9;
+  font-family: var(--font-display); font-weight: 600; font-size: 26px;
+  color: var(--ink); opacity: 0.45;
+}
+.swipe {
+  position: absolute; bottom: 64px; right: 90px; z-index: 9;
+  font-family: var(--font-display); font-weight: 600; font-size: 28px;
+  color: var(--accent);
+}
+
+/* copy primitives */
+.kick {
+  align-self: flex-start;
+  font-family: var(--font-display); font-weight: 600; font-size: 25px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent-2);
+  background: var(--soft); border-radius: 999px; padding: 12px 28px;
+}
+.h {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 84px; line-height: 1.12; letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.h .g { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sup {
+  font-family: var(--font-body); font-weight: 500;
+  font-size: 36px; line-height: 1.5; color: var(--muted);
+}
+.sup b { color: var(--ink); font-weight: 700; }
+
+/* surfaces */
+.card { background: #fff; border-radius: 24px; box-shadow: 0 18px 60px rgba(13,31,78,0.12); }
+.softcard { background: var(--soft); border-radius: 24px; }
+
+/* google-style result card bits */
+.stars { color: #f5a623; letter-spacing: 2px; }
+
+/* reserved logo zone (slides 1 & 7) — swap for brand/uplift/logo.png when on disk */
+.logozone {
+  position: absolute; z-index: 9; display: flex; align-items: center; justify-content: center;
+}

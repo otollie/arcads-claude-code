@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  @font-face { font-family:'Anton'; src:url('fonts/Anton-Regular.ttf'); }
+  body { width:1024px; height:1024px; position:relative; overflow:hidden;
+    font-family:'Anton',Arial,sans-serif;
+    background:radial-gradient(circle at 50% 42%, #1b1140 0%, #0A0720 62%); }
+
+  /* center lockup: mic + AI */
+  .lock { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    display:flex; align-items:center; gap:36px; z-index:3; }
+
+  .mic { display:flex; flex-direction:column; align-items:center; }
+  .mic .head { width:176px; height:294px; border-radius:88px;
+    background:linear-gradient(135deg,#8B5CF6 0%, #E935C1 100%);
+    box-shadow:0 14px 44px rgba(233,53,193,0.45), inset 0 4px 0 rgba(255,255,255,0.2);
+    position:relative; }
+  /* grille lines */
+  .mic .head::before { content:''; position:absolute; left:28px; right:28px; top:34px; bottom:70px;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.55) 0 6px, transparent 6px 20px);
+    border-radius:40px; }
+  .mic .stem { width:26px; height:82px; background:#efeaff; margin-top:-6px; border-radius:5px; }
+  .mic .base { width:176px; height:26px; background:#efeaff; border-radius:14px; margin-top:2px; }
+
+  .ai { font-size:360px; color:#fff; line-height:1; letter-spacing:2px;
+    text-shadow:0 10px 34px rgba(0,0,0,0.35);
+    background:linear-gradient(135deg,#fff 0%, #f0e9ff 100%);
+    -webkit-background-clip:text; background-clip:text; }
+</style></head>
+<body>
+  <div class="lock">
+    <div class="mic">
+      <div class="head"></div>
+      <div class="stem"></div>
+      <div class="base"></div>
+    </div>
+    <div class="ai">AI</div>
+  </div>
+</body></html>

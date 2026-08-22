@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: 'BigShoulders'; src: url('canvas-fonts/BigShoulders-Bold.ttf'); }
+  @font-face { font-family: 'Inter'; src: url('fonts/InterVar.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'PlexMono'; src: url('canvas-fonts/IBMPlexMono-Regular.ttf'); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    font-family: 'Inter', sans-serif; color: #fff;
+    /* fallback dusk-city gradient shows until brand/ollierdz-nyc.jpg exists */
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.30) 24%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.70) 100%),
+      url('brand/ollierdz-nyc.jpg') 48% center / cover no-repeat,
+      #0D1117;
+  }
+  .counter { position: absolute; top: 30px; right: 34px; z-index: 5;
+    font-family:'PlexMono',monospace; font-weight: 600; font-size: 26px; color: #fff;
+    background: rgba(20,20,20,0.55); backdrop-filter: blur(4px); padding: 8px 20px; border-radius: 999px; }
+
+  .overlay { position: absolute; top: 132px; left: 60px; right: 60px; z-index: 4; }
+  .head { font-family: 'BigShoulders', sans-serif; font-weight: 700; font-size: 116px; line-height: 0.92; letter-spacing: 0.005em; text-transform: uppercase; display: flex; align-items: baseline; gap: 22px; flex-wrap: wrap; }
+  .head .w { color: #fff; text-shadow: 0 3px 18px rgba(0,0,0,0.5); }
+  .head .kw { color: #fff; background: #238636; padding: 2px 20px 6px; border-radius: 6px; box-shadow: 0 8px 26px rgba(0,0,0,0.4); }
+  .sub { font-size: 40px; font-weight: 500; line-height: 1.28; margin-top: 26px; max-width: 940px; text-shadow: 0 2px 14px rgba(0,0,0,0.7); }
+
+  .lockup { position: absolute; bottom: 54px; left: 0; right: 0; z-index: 4; display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .lockup .sq { display: inline-flex; gap: 5px; }
+  .lockup .sq i { width: 14px; height: 14px; border-radius: 3px; }
+  .lockup .txt { font-family: 'BigShoulders', sans-serif; font-weight: 700; font-size: 40px; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+  .lockup .txt .light { font-weight: 400; opacity: 0.85; }
+
+  .note { position: absolute; bottom: 130px; left: 0; right: 0; text-align: center; z-index: 3; font-family:'PlexMono',monospace; font-size: 18px; color: rgba(255,255,255,0.45); }
+</style></head>
+<body>
+  <div class="counter">9/9</div>
+
+  <div class="overlay">
+    <div class="head"><span class="w">Comment</span><span class="kw">GitHub</span></div>
+    <div class="sub">and I'll send you my free <b>Get Started on GitHub</b> guide.</div>
+  </div>
+
+  <div class="lockup">
+    <span class="sq"><i style="background:#006D32"></i><i style="background:#26A641"></i><i style="background:#39D353"></i></span>
+    <span class="txt"><span class="light">Build with</span> @ollierdz</span>
+  </div>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { overflow: hidden; }
+
+  /* dark anchor behind subject so the jacket grounds into the design */
+  .anchor {
+    position: absolute; bottom: 0; left: 0;
+    width: 760px; height: 740px;
+    background: radial-gradient(ellipse 70% 70% at 30% 95%, rgba(17,17,17,0.40) 0%, rgba(17,17,17,0.0) 62%);
+    z-index: 1;
+  }
+
+  .me {
+    position: absolute; bottom: 0; left: -36px;
+    width: 650px; z-index: 2;
+    filter: drop-shadow(14px 6px 26px rgba(17,17,17,0.30));
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 5%);
+  }
+
+  .kicker { top: 128px; left: 76px; }
+  .headline {
+    position: absolute; top: 206px; left: 72px; right: 64px;
+    font-family: 'Archivo Black'; font-size: 86px; line-height: 0.99; letter-spacing: -0.035em;
+    z-index: 3;
+  }
+  .headline .accent { color: var(--terra); }
+
+  .sub {
+    position: absolute; top: 600px; right: 70px; width: 430px; z-index: 3;
+    font-size: 33px; font-weight: 550; color: #333; line-height: 1.32;
+  }
+  .sub b { font-weight: 800; color: var(--ink); }
+
+  .swipe {
+    position: absolute; top: 850px; right: 200px; z-index: 3;
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'Archivo Black'; font-size: 30px; color: var(--ink); letter-spacing: -0.01em;
+  }
+  .swipe svg { width: 58px; height: 34px; }
+
+  .wm { left: auto; right: 48px; z-index: 5; color: rgba(17,17,17,0.45); }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">1/7</div></div>
+
+  <div class="anchor"></div>
+  <img class="me" src="brand/ollierdz-duotone.png" alt="">
+
+  <div class="kicker terra">TUTORIAL</div>
+  <div class="headline">Install <span class="accent">Claude&nbsp;Code</span> in 5 minutes.</div>
+
+  <div class="sub">
+    The AI agent that <b>writes, fixes &amp; ships code</b> — right from your terminal.
+  </div>
+
+  <div class="swipe">
+    SWIPE
+    <svg viewBox="0 0 60 34"><path d="M2 17 H46 M34 5 L48 17 L34 29" stroke="#DE8B66" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

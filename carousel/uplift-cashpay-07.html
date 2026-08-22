@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  :root { --bg:#0D1F4E; --ink:#FFFFFF; --muted:#9fb2d6; --accent:#38B6E8; --accent-2:#7cc9ec;
+    --soft:#16295e; --grad:linear-gradient(135deg,#38B6E8,#7ee0ff); }
+  .counter { color:#fff; }
+  .pad { justify-content:center; gap:38px; align-items:flex-start; }
+  .h { font-size:78px; }
+  .poll { display:flex; gap:22px; margin-top:6px; }
+  .chip { font-family:var(--font-display); font-weight:700; font-size:38px; padding:26px 44px; border-radius:999px; }
+  .chip.a { background:linear-gradient(135deg,#38B6E8,#7ee0ff); color:#0D1F4E; }
+  .chip.b { background:transparent; color:#fff; border:3px solid #33477a; }
+  .ask { display:flex; align-items:center; gap:18px; font-family:var(--font-display);
+    font-weight:700; font-size:44px; color:#fff; margin-top:6px; }
+  .ask .bub { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,#38B6E8,#7ee0ff);
+    display:flex; align-items:center; justify-content:center; font-size:28px; }
+  .small { font-family:var(--font-body); font-weight:600; font-size:30px; color:#9fb2d6; }
+  .site { position:absolute; bottom:56px; left:0; right:0; text-align:center; z-index:9;
+    font-family:var(--font-display); font-weight:700; font-size:44px; color:#fff; }
+  .site span { color:var(--accent-2); }
+</style></head>
+<body>
+  <div class="counter">7/7</div>
+  <div class="pad">
+    <div class="h">Cash-pay: smart move<br>or <span class="g">selling out</span>?</div>
+    <div class="poll"><span class="chip a">Smart move</span><span class="chip b">Selling out</span></div>
+    <div class="ask"><span class="bub">💬</span> Tell me below.</div>
+    <div class="small">Follow for more clinic-growth tips.</div>
+  </div>
+  <div class="site">uplift<span>.marketing</span></div>
+</body></html>

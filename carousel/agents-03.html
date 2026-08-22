@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="agents-base-v2.css">
+<style>
+  .kicker { position: absolute; top: 130px; left: 76px; }
+  .h { position: absolute; top: 192px; left: 72px; right: 64px; font-size: 80px; }
+  .sub { position: absolute; top: 358px; left: 76px; right: 110px; font-size: 31px; font-weight: 500; color: var(--muted); line-height: 1.4; }
+  .sub b { color: var(--paper); font-weight: 700; }
+
+  .eq { position: absolute; top: 488px; left: 64px; right: 64px; display: flex; flex-direction: column; gap: 18px; }
+  .term { display: flex; align-items: center; gap: 26px; padding: 28px 32px; border-radius: 20px; }
+  .t0 { background: rgba(255,255,255,0.04); border: 1.5px solid var(--line); }
+  .t1 { background: linear-gradient(120deg, rgba(139,92,246,0.2), rgba(139,92,246,0.06)); border: 1.5px solid rgba(139,92,246,0.45); }
+  .t2 { background: linear-gradient(120deg, rgba(233,53,193,0.2), rgba(233,53,193,0.06)); border: 1.5px solid rgba(233,53,193,0.5); }
+  .gl { width: 70px; height: 70px; border-radius: 16px; flex: none; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); }
+  .term h3 { font-family: 'Archivo Black'; font-size: 33px; letter-spacing: -0.02em; color: var(--paper); }
+  .term p { font-size: 24px; color: #D9D4FF; margin-top: 4px; line-height: 1.28; }
+  .term b { font-weight: 800; }
+  .op { text-align: center; font-family: 'Archivo Black'; font-size: 34px; color: var(--muted); margin: -4px 0; }
+
+  .result { position: absolute; bottom: 92px; left: 64px; right: 64px; padding: 26px; border-radius: 20px; text-align: center;
+    background: linear-gradient(120deg, var(--violet), var(--magenta)); box-shadow: 0 22px 54px rgba(233,53,193,0.36); }
+  .result b { font-family: 'Archivo Black'; font-size: 30px; color: #fff; letter-spacing: -0.01em; }
+</style></head>
+<body>
+  <div class="topbar"><div class="handle">@ollierdz</div><div class="counter">3/9</div></div>
+
+  <div class="kicker">So what IS it</div>
+  <div class="h">It's just <span class="g">Claude — with a job.</span></div>
+  <div class="sub">An agent is the <b>same Claude you chat with</b>, handed two extra things:</div>
+
+  <div class="eq">
+    <div class="term t0">
+      <div class="gl"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C9C2FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div><h3>Claude</h3><p>The brain that reasons (you know this part).</p></div>
+    </div>
+    <div class="op">+</div>
+    <div class="term t1">
+      <div class="gl"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C9B6FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a1.5 1.5 0 0 0 2 2l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg></div>
+      <div><h3>Tools</h3><p>So it can <b>do</b> things, not just talk.</p></div>
+    </div>
+    <div class="op">+</div>
+    <div class="term t2">
+      <div class="gl"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#F5A8E4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+      <div><h3>A goal</h3><p>What you want done, <b>in plain English</b>.</p></div>
+    </div>
+  </div>
+
+  <div class="result"><b>Claude + tools + a goal = an agent.</b></div>
+
+  <div class="wm">@ollierdz</div>
+</body></html>

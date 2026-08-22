@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="square-base.css">
+<style>
+  :root { --bg:#0D1F4E; --ink:#FFFFFF; --muted:#9fb2d6; --accent:#38B6E8; --accent-2:#7cc9ec;
+    --soft:#16295e; --grad:linear-gradient(135deg,#38B6E8,#7ee0ff); }
+  .kick { background:rgba(56,182,232,0.16); color:#7cc9ec; }
+  .counter { color:#fff; }
+  .pad { gap:34px; }
+  .cards { margin-top:20px; display:flex; flex-direction:column; gap:22px; }
+  .svc { display:flex; align-items:center; gap:26px; background:#16295e; border-radius:22px; padding:34px 38px; }
+  .num { font-family:var(--font-display); font-weight:700; font-size:34px;
+    width:74px; height:74px; border-radius:16px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:#0D1F4E;
+    background:linear-gradient(135deg,#38B6E8,#7ee0ff); }
+  .txt { font-family:var(--font-display); font-weight:600; font-size:40px; color:#fff; }
+  .site { position:absolute; bottom:64px; left:90px; z-index:9;
+    font-family:var(--font-display); font-weight:600; font-size:26px; color:#7cc9ec; opacity:0.85; }
+  .swipe { color:var(--accent-2); }
+</style></head>
+<body>
+  <div class="counter">5/7</div>
+  <div class="pad">
+    <div class="kick">where to start</div>
+    <div class="h">Where smart clinics start</div>
+    <div class="cards">
+      <div class="svc"><span class="num">01</span><span class="txt">Parent coaching sessions</span></div>
+      <div class="svc"><span class="num">02</span><span class="txt">Intensive therapy blocks</span></div>
+      <div class="svc"><span class="num">03</span><span class="txt">Paid screenings &amp; programs</span></div>
+    </div>
+  </div>
+  <div class="site">uplift.marketing</div>
+  <div class="swipe">→</div>
+</body></html>

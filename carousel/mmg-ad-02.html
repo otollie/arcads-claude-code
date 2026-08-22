@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-SemiBold.ttf');font-weight:600;}
+  @font-face{font-family:'Inter';src:url('fonts/InterVar.ttf');font-weight:100 900;}
+  body{width:1080px;height:1080px;overflow:hidden;position:relative;
+    font-family:'Poppins',Arial,sans-serif;
+    background:radial-gradient(120% 120% at 70% 0%, #8B5CF6 0%, #6D5DF6 34%, #4F46E5 70%, #2c2385 100%);}
+  .glow{position:absolute;inset:0;background:radial-gradient(closest-side at 22% 18%, rgba(255,255,255,0.2), transparent 60%);}
+  .head{position:absolute;top:104px;left:0;right:0;text-align:center;z-index:3;
+    font-weight:600;font-size:104px;line-height:0.96;color:#fff;letter-spacing:-1.5px;}
+  .sub{position:absolute;top:250px;left:0;right:0;text-align:center;z-index:3;
+    font-family:'Inter';font-weight:600;font-size:34px;color:rgba(255,255,255,0.82);}
+  .phone{position:absolute;left:50%;top:640px;transform:translate(-50%,-50%);z-index:2;
+    width:432px;height:604px;background:#0e0e22;border-radius:52px;padding:16px;
+    box-shadow:0 44px 100px rgba(20,10,60,0.6);}
+  .ph-screen{width:100%;height:100%;background:#fff;border-radius:40px;overflow:hidden;
+    display:flex;flex-direction:column;}
+  .ph-top{padding:34px 30px 14px;}
+  .ph-top .app{font-family:'Poppins';font-weight:600;font-size:30px;color:#14142B;}
+  .ph-top .app span{color:#4F46E5;}
+  .ph-graph{flex:1;padding:8px 22px 26px;display:flex;align-items:center;}
+  .ph-graph img{width:100%;border:1px solid #eee;border-radius:18px;}
+  .brand{position:absolute;bottom:70px;left:0;right:0;text-align:center;z-index:3;
+    font-weight:600;font-size:46px;color:#fff;letter-spacing:-0.5px;}
+</style></head>
+<body>
+  <div class="glow"></div>
+  <div class="head">Watch it climb.</div>
+  <div class="sub">Your progress, one line, every week.</div>
+  <div class="phone">
+    <div class="ph-screen">
+      <div class="ph-top"><div class="app">Mark My <span>Graph</span></div></div>
+      <div class="ph-graph"><img src="mmg-graph.png"></div>
+    </div>
+  </div>
+  <div class="brand">markmygraph.com</div>
+</body></html>

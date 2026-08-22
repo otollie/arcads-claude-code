@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @font-face{font-family:'Inter';src:url('fonts/InterVar.ttf');font-weight:100 900;}
+  body{width:620px;height:1044px;background:#fff;font-family:'Inter',Arial,sans-serif;
+    padding:52px 44px;display:flex;flex-direction:column;}
+  .brand{font-weight:800;font-size:34px;color:#14142B;letter-spacing:-0.02em;}
+  .brand span{color:#4F46E5;}
+  .lbl{margin-top:54px;font-weight:600;font-size:26px;color:#8A8AA0;letter-spacing:0.02em;}
+  .statrow{display:flex;align-items:baseline;gap:18px;margin-top:6px;}
+  .big{font-weight:800;font-size:132px;line-height:0.9;color:#14142B;letter-spacing:-3px;}
+  .delta{font-weight:700;font-size:34px;color:#4F46E5;}
+  .card{margin-top:40px;border:1px solid #ececf2;border-radius:24px;padding:30px 26px 22px;}
+  .card .t{font-weight:700;font-size:26px;color:#14142B;}
+  svg{margin-top:10px;display:block;}
+  .yl,.xl{font-size:17px;fill:#a6a6bb;font-family:'Inter';}
+  .grid{stroke:#f0f0f4;stroke-width:2;}
+  .line{fill:none;stroke:#4F46E5;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+  .area{fill:url(#g);opacity:0.12;}
+  .dot{fill:#4F46E5;}
+  .peak{font-size:26px;font-weight:800;fill:#14142B;font-family:'Inter';}
+  .foot{margin-top:auto;font-size:22px;color:#a6a6bb;padding-top:24px;}
+</style></head>
+<body>
+  <div class="brand">Mark My <span>Graph</span></div>
+  <div class="lbl">This week</div>
+  <div class="statrow"><div class="big">95</div><div class="delta">&#9650; +11</div></div>
+  <div class="card">
+    <div class="t">Your graph</div>
+    <svg width="528" height="330" viewBox="0 0 528 330">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#4F46E5" stop-opacity="0"/></linearGradient></defs>
+      <line class="grid" x1="70" y1="40" x2="510" y2="40"/>
+      <line class="grid" x1="70" y1="110" x2="510" y2="110"/>
+      <line class="grid" x1="70" y1="180" x2="510" y2="180"/>
+      <line class="grid" x1="70" y1="250" x2="510" y2="250"/>
+      <text class="yl" x="54" y="46" text-anchor="end">100</text>
+      <text class="yl" x="54" y="116" text-anchor="end">85</text>
+      <text class="yl" x="54" y="186" text-anchor="end">70</text>
+      <text class="yl" x="54" y="256" text-anchor="end">60</text>
+      <polygon class="area" points="92,214 150,186 208,200 266,131 324,150 382,94 440,110 498,66 498,258 92,258"/>
+      <polyline class="line" points="92,214 150,186 208,200 266,131 324,150 382,94 440,110 498,66"/>
+      <circle class="dot" cx="92" cy="214" r="6"/><circle class="dot" cx="150" cy="186" r="6"/>
+      <circle class="dot" cx="208" cy="200" r="6"/><circle class="dot" cx="266" cy="131" r="6"/>
+      <circle class="dot" cx="324" cy="150" r="6"/><circle class="dot" cx="382" cy="94" r="6"/>
+      <circle class="dot" cx="440" cy="110" r="6"/><circle class="dot" cx="498" cy="66" r="8"/>
+      <text class="peak" x="498" y="46" text-anchor="middle">95</text>
+      <text class="xl" x="92" y="288" text-anchor="middle">6.25</text>
+      <text class="xl" x="208" y="288" text-anchor="middle">7.9</text>
+      <text class="xl" x="324" y="288" text-anchor="middle">7.23</text>
+      <text class="xl" x="440" y="288" text-anchor="middle">8.6</text>
+    </svg>
+  </div>
+  <div class="foot">Sample numbers — yours appear as you enter weeks.</div>
+</body></html>
